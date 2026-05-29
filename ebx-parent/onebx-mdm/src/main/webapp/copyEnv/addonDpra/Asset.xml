@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+    <Asset>
+        <id>3819f957-d51d-438e-b1e0-86a2973966fc</id>
+        <assetType>38460bcc-1446-448c-9b57-cc6fd42f31fb</assetType>
+        <workflow>SendEmail</workflow>
+    </Asset>
+    <Asset>
+        <id>bfd4e600-666a-4792-86b1-418217a8d0ea</id>
+        <assetType>f89e668f-f415-4747-bbe0-6b839021060c</assetType>
+        <dataspace>BPerson</dataspace>
+        <dataset>Person</dataset>
+        <table>/root/Person</table>
+    </Asset>
+</root>

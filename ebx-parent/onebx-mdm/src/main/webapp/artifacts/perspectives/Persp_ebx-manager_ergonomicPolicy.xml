@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<x:root xmlns:x="urn:ebx-schemas:cfx_1.0">
+    <domain>
+        <ergonomicPolicy>
+            <tableRecordColumnsMaxPolicy>10</tableRecordColumnsMaxPolicy>
+            <tableColumnsMaxAutoWidth>200</tableColumnsMaxAutoWidth>
+            <hierarchyExpandAllThreshold>100</hierarchyExpandAllThreshold>
+            <defaultFilter>simpleSearch</defaultFilter>
+            <messageBoxAutodisplaySeverity>W</messageBoxAutodisplaySeverity>
+            <_customCSS_labelWidth>250</_customCSS_labelWidth>
+            <_customCSS_inputWidth>400</_customCSS_inputWidth>
+            <_customCSS_textareaHeight>200</_customCSS_textareaHeight>
+            <_textarea_technicalMaxLength>1000000</_textarea_technicalMaxLength>
+            <listEditor>
+                <simpleType>15</simpleType>
+                <complexType>7</complexType>
+                <complexTypeEmbedded>3</complexTypeEmbedded>
+            </listEditor>
+            <_customCSS_htmlEditorMinWidth>400</_customCSS_htmlEditorMinWidth>
+            <_customCSS_htmlEditorMaxWidth>800</_customCSS_htmlEditorMaxWidth>
+            <_customCSS_htmlEditorMinHeight>100</_customCSS_htmlEditorMinHeight>
+            <_customCSS_htmlEditorMaxHeight>600</_customCSS_htmlEditorMaxHeight>
+            <_optionsDefault_htmlSpellcheck>false</_optionsDefault_htmlSpellcheck>
+            <ajaxFacetEnumerationPageSize>10</ajaxFacetEnumerationPageSize>
+            <dataspaceTreePageSize>20</dataspaceTreePageSize>
+            <openUrlInWindow>InWindow</openUrlInWindow>
+            <recordFormNodesDisplayMode>3</recordFormNodesDisplayMode>
+            <enableDisplaySelectionAndSncInCreation>false</enableDisplaySelectionAndSncInCreation>
+            <displayDensity>COMPACT</displayDensity>
+            <avatarHeader>A</avatarHeader>
+            <avatarHistory>A</avatarHistory>
+            <avatarWorkflow>A</avatarWorkflow>
+        </ergonomicPolicy>
+    </domain>
+</x:root>

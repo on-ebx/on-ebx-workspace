@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<preferences>
+    <tableViewsPreferences>
+        <Id>61194C80-98A0-11EC-BD44-005A55883DFC</Id>
+        <schemaKey>module: ebx-addon-mame, path: /WEB-INF/ebx/schema/ebx-addon-mame-configuration.xsd</schemaKey>
+        <tablePath>/root/TableConfiguration</tablePath>
+        <order>1</order>
+        <viewId>7FEECC20-9873-11EC-ABFF-00629F24177C</viewId>
+        <profileList>Beveryone</profileList>
+        <dataSetReference>ebx-addon-mame-configuration</dataSetReference>
+    </tableViewsPreferences>
+    <tableViewsPreferences>
+        <Id>AFC42C40-9A4C-11E6-B157-005108703D4B</Id>
+        <schemaKey>module: ebx-addon-dqid, path: /WEB-INF/ebx/schema/ebx-addon-dqid-configuration.xsd</schemaKey>
+        <tablePath>/root/DataElementDefinition/DataElementConcept</tablePath>
+        <order>2</order>
+        <viewId>CE0E0C80-337B-11E6-A246-00F53B7A97DC</viewId>
+        <profileList>Badministrator</profileList>
+        <dataSetReference>ebx-addon-dqid-configuration</dataSetReference>
+    </tableViewsPreferences>
+</preferences>

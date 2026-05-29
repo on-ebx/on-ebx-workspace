@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<directory>
+    <policy>
+        <selfEdition>true</selfEdition>
+        <selfEditionFields>/salutation</selfEditionFields>
+        <selfEditionFields>/firstName</selfEditionFields>
+        <selfEditionFields>/lastName</selfEditionFields>
+        <selfEditionFields>/email</selfEditionFields>
+        <selfEditionFields>/avatar</selfEditionFields>
+        <selfEditionFields>/password</selfEditionFields>
+        <selfEditionFields>/jobFunction</selfEditionFields>
+        <selfEditionFields>/officePhoneNumber</selfEditionFields>
+        <selfEditionFields>/mobilePhoneNumber</selfEditionFields>
+        <selfEditionFields>/faxNumber</selfEditionFields>
+        <enablePasswordReminder>true</enablePasswordReminder>
+    </policy>
+</directory>

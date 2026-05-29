@@ -1,0 +1,9 @@
+/.metadata/
+/.recommenders/
+/.ebx-server/webapps/*
+/.ebx-server/shared/lib/*
+/.ebx-server/logs/*
+/.ebx/libs/*
+/.ebx/webapps/*
+/.ebx-home/ebxRepository/index*
+/.ebx-home/ebxLog/*

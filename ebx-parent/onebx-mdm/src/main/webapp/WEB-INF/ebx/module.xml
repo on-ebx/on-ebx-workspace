@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module xmlns="urn:ebx-schemas:module_2.4"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="urn:ebx-schemas:module_2.4 http://schema.orchestranetworks.com/module_2.4.xsd">
+	<name>onebx-mdm</name>
+	<publicPath>onebx-mdm</publicPath>
+	<services>
+		<!-- Built-in EBX services extensions -->
+	</services>
+
+	<beans>
+
+		
+	</beans>
+</module>
+

@@ -1,0 +1,1967 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+    <Function>
+        <id>002e8815-6487-4624-bd65-ff13dcdbc0d9</id>
+        <code>[built-in] F18</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Field completeness rate</label>
+                <description>Computes the completeness rate of an asset (the percentage of fulfillment of a field against all records in the table).</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Taux de complétude du champ</label>
+                <description>Calcule le taux de complétude d'un champ (le pourcentage de complétude d'un champ par rapport à tous les enregistrements de la table).</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>7acfa51b-ba65-49ae-99cb-71bc5ae0a0bb</applyOn>
+        <defaultChartType>1e76f993-9799-4643-98db-459d17130245</defaultChartType>
+        <supportedChartTypes>1e76f993-9799-4643-98db-459d17130245</supportedChartTypes>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <supportedChartTypes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</supportedChartTypes>
+        <outputDefinitions>
+            <name>completenessRate</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Field completeness rate</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Taux de complétude du champ</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>percent</type>
+        </outputDefinitions>
+        <enableLinkedRecords>false</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>true</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>015f6463-5390-429f-82ac-86c0fe25bee7</id>
+        <code>[built-in] W02</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Workflow instances statistics</label>
+                <description>Computes the number of workflow instances in different states, such as to be executed, in progress, completed, and errors.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Statistiques sur les instances de workflow</label>
+                <description>Calcule le nombre d'instances de workflow dans différents états : à exécuter, en cours, terminé et erreurs.</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>38460bcc-1446-448c-9b57-cc6fd42f31fb</applyOn>
+        <defaultChartType>59c0ddef-d3f1-4852-a52b-4648cc76abd8</defaultChartType>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <supportedChartTypes>e80e1d72-622c-4210-ae5a-b721b505aae6</supportedChartTypes>
+        <supportedChartTypes>3297d6d7-84c7-4d81-a79f-6bec53359a9d</supportedChartTypes>
+        <supportedChartTypes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</supportedChartTypes>
+        <supportedChartTypes>02cfccc4-4843-11ec-81d3-0242ac130003</supportedChartTypes>
+        <outputDefinitions>
+            <name>numOfInstancesInProgress</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Instances in progress</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Instances en cours</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+        </outputDefinitions>
+        <outputDefinitions>
+            <name>numOfCompletedInstances</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Completed instances</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Instances terminées</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+        </outputDefinitions>
+        <outputDefinitions>
+            <name>numOfInstancesWithErrors</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Instances with errors</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Instances en erreur</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+        </outputDefinitions>
+        <enableLinkedRecords>false</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>false</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>0c6bfef8-c8eb-4c8c-8fca-0ca9d22c7d66</id>
+        <code>[built-in] F22</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>String Length Distribution</label>
+                <description>A Column String Length Distribution reports all the distinct lengths of string values in the selected column and the number of rows in the table that each length represents. This profile can help you identify problems in your data such as invalid values.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Distribution de la longueur des chaînes de caractères</label>
+                <description>La distribution de la longueur des chaînes de caractères d'une colonne indique toutes les longueurs distinctes des valeurs de chaîne de caractères dans la colonne sélectionnée et le nombre de lignes du tableau que chaque longueur représente. Ce profil peut vous aider à identifier des problèmes dans vos données, tels que des valeurs invalides.</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>7acfa51b-ba65-49ae-99cb-71bc5ae0a0bb</applyOn>
+        <defaultChartType>59c0ddef-d3f1-4852-a52b-4648cc76abd8</defaultChartType>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <inputDefinitions>
+            <name>maximumNumberOfOutput</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Maximum number of output</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Nombre maximal de sorties</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+            <multiValued>false</multiValued>
+            <values>10</values>
+        </inputDefinitions>
+        <inputDefinitions>
+            <name>countWhitespaceAsOneSize</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Count white spaces as 1 size</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Compter les espaces blancs</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>boolean</type>
+            <multiValued>false</multiValued>
+            <values>true</values>
+        </inputDefinitions>
+        <outputDefinitions>
+            <name>distinctStringLengthValue</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Distinct string length values</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Valeurs de longueur de chaîne de caractères distinctes</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>string</type>
+        </outputDefinitions>
+        <outputDefinitions>
+            <name>numberOfCountsByStringLengthValue</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Number of counts by string length value</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Nombre de comptages par valeur de longueur de chaîne de caractères</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+        </outputDefinitions>
+        <enableLinkedRecords>true</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>false</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>16aee4b6-050b-46b6-8061-dd5f6f866b7c</id>
+        <code>[built-in] W05</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Workflow publication average processing time</label>
+                <description>Computes the average processing time for a workflow publication. All completed instances of the publication are used. The duration is the difference between the started and the completed date of all tasks.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Délai moyen de traitement d'une publication de workflow</label>
+                <description>Calcule le temps de traitement moyen d'une publication de workflow. Toutes les instances terminées de la publication sont utilisées. La durée est la différence entre la date de début et la date de fin de toutes les tâches.</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>38460bcc-1446-448c-9b57-cc6fd42f31fb</applyOn>
+        <defaultChartType>1e76f993-9799-4643-98db-459d17130245</defaultChartType>
+        <supportedChartTypes>1e76f993-9799-4643-98db-459d17130245</supportedChartTypes>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <supportedChartTypes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</supportedChartTypes>
+        <inputDefinitions>
+            <name>calculateFromOfferOrAllocatedMoment</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Calculate from the offered or allocated moment</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Calculer à partir du moment offert ou alloué</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>boolean</type>
+            <multiValued>false</multiValued>
+            <values>true</values>
+        </inputDefinitions>
+        <outputDefinitions>
+            <name>averageProcessingTime</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Average processing time</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Délai moyen de traitement</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>interval</type>
+        </outputDefinitions>
+        <enableLinkedRecords>false</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>false</enableFilter>
+        <enableAlert>false</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>178f76a1-9a8a-4489-9ac7-f9d57b3b7127</id>
+        <code>[built-in] F07</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Not unique count</label>
+                <description>Computes the number of values which occur more than once.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Nombre de valeurs non uniques</label>
+                <description>Calcule le nombre de valeurs qui apparaissent plus d'une fois.</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>7acfa51b-ba65-49ae-99cb-71bc5ae0a0bb</applyOn>
+        <defaultChartType>1e76f993-9799-4643-98db-459d17130245</defaultChartType>
+        <supportedChartTypes>1e76f993-9799-4643-98db-459d17130245</supportedChartTypes>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <supportedChartTypes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</supportedChartTypes>
+        <outputDefinitions>
+            <name>numberOfNotUniqueValues</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Number of not unique values</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Nombre de valeurs non uniques</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+        </outputDefinitions>
+        <enableLinkedRecords>true</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>true</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>1ce4006f-0b0d-4f04-bbb6-d4903cdbc74c</id>
+        <code>[built-in] F09</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Minimum length</label>
+                <description>Returns the length of the shortest field value.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Longueur minimale</label>
+                <description>Retourne la longueur de la valeur de champ la plus courte.</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>7acfa51b-ba65-49ae-99cb-71bc5ae0a0bb</applyOn>
+        <defaultChartType>1e76f993-9799-4643-98db-459d17130245</defaultChartType>
+        <supportedChartTypes>1e76f993-9799-4643-98db-459d17130245</supportedChartTypes>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <supportedChartTypes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</supportedChartTypes>
+        <inputDefinitions>
+            <name>countWhitespaceAsOneSize</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Count white spaces as 1 size</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Compter les espaces blancs</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>boolean</type>
+            <multiValued>false</multiValued>
+            <values>true</values>
+        </inputDefinitions>
+        <outputDefinitions>
+            <name>minLength</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Length of the shortest field value</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Longueur de la valeur de champ la plus courte</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+        </outputDefinitions>
+        <enableLinkedRecords>true</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>true</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>1e2f1116-1a9d-4f36-ba3c-cc6e03df87ea</id>
+        <code>[built-in] D06</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Dataset freshness</label>
+                <description>Computes dataset freshness (the average of each table's freshness score). Table freshness is the average of each record's score. A record's score is calculated using the following method: subtract the indicator's last execution date from the record's last modification date. The lower the score, the fresher the data.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Fraîcheur du jeu de données</label>
+                <description>Calcule la fraîcheur du jeu de données (la moyenne du score de fraîcheur de chaque table). La fraîcheur de la table est la moyenne du score de chaque enregistrement. Le score d'un enregistrement est calculé selon la méthode suivante : soustraire la date de dernière exécution de l'indicateur à la date de dernière modification de l'enregistrement. Plus le score est bas, plus les données sont fraîches.</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>34205330-bd90-425a-90ed-969f11022a2a</applyOn>
+        <defaultChartType>1e76f993-9799-4643-98db-459d17130245</defaultChartType>
+        <supportedChartTypes>1e76f993-9799-4643-98db-459d17130245</supportedChartTypes>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <supportedChartTypes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</supportedChartTypes>
+        <outputDefinitions>
+            <name>outputDatasetFreshness</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Dataset freshness (in days)</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Fraîcheur du jeu de données (en jours)</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>decimal</type>
+        </outputDefinitions>
+        <enableLinkedRecords>false</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>false</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>2384513f-5281-4574-ad79-01317335d778</id>
+        <code>[built-in] F15</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Median of a field's values</label>
+                <description>Computes the median of a numeric series. It returns the value which divides all the values sorted in 2 sub lists of the same size. If number of values is odd, the result is the middle value of the list of all the sorted values. If number of values is even, the result is the mean of the two values in the middle of the list of all the sorted values. If all values are null, result is 'NULL'.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Médiane des valeurs d'un champ</label>
+                <description>Calcule la médiane d'une série numérique. Il renvoie la valeur qui divise toutes les valeurs triées en 2 sous-listes de même taille. Si le nombre de valeurs est impair, le résultat est la valeur médiane de la liste de toutes les valeurs triées. Si le nombre de valeurs est pair, le résultat est la moyenne des deux valeurs au milieu de la liste de toutes les valeurs triées. Si toutes les valeurs sont nulles, le résultat est 'NULL'.</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>7acfa51b-ba65-49ae-99cb-71bc5ae0a0bb</applyOn>
+        <defaultChartType>1e76f993-9799-4643-98db-459d17130245</defaultChartType>
+        <supportedChartTypes>1e76f993-9799-4643-98db-459d17130245</supportedChartTypes>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <supportedChartTypes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</supportedChartTypes>
+        <outputDefinitions>
+            <name>medianOfFieldValue</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Median of a field's values</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Médiane des valeurs d'un champ</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>decimal</type>
+        </outputDefinitions>
+        <enableLinkedRecords>false</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>true</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>29ea4ecb-a829-40d8-9944-5e6f1e4b2bc4</id>
+        <code>[built-in] W01</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Number of open workflow instance</label>
+                <description>Computes the number of open workflow instance related to the publications of the last workflow model (i.e. publication state = Enabled).</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Nombre d'instances ouvertes de workflow</label>
+                <description>Calcule le nombre d'instances de workflow ouvertes liées aux publications du dernier modèle de workflow (état de publication = Activée).</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>38460bcc-1446-448c-9b57-cc6fd42f31fb</applyOn>
+        <defaultChartType>1e76f993-9799-4643-98db-459d17130245</defaultChartType>
+        <supportedChartTypes>1e76f993-9799-4643-98db-459d17130245</supportedChartTypes>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <supportedChartTypes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</supportedChartTypes>
+        <outputDefinitions>
+            <name>numOfOpenWorkflowInstance</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Number of open workflow instances</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Nombre d'instances ouvertes de workflow.</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+        </outputDefinitions>
+        <enableLinkedRecords>false</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>false</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>350e426a-6dda-44db-bb86-1ac88c69ea06</id>
+        <code>[built-in] T05</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Number of users by operation</label>
+                <description>Computes the number of users that perform creations, updates, and deletions in a given table.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Nombre d'utilisateurs par opération</label>
+                <description>Calcule le nombre d'utilisateurs pour chaque opération de création, de mise à jour et de suppression dans une table donnée.</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>f89e668f-f415-4747-bbe0-6b839021060c</applyOn>
+        <defaultChartType>59c0ddef-d3f1-4852-a52b-4648cc76abd8</defaultChartType>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <supportedChartTypes>e80e1d72-622c-4210-ae5a-b721b505aae6</supportedChartTypes>
+        <supportedChartTypes>3297d6d7-84c7-4d81-a79f-6bec53359a9d</supportedChartTypes>
+        <supportedChartTypes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</supportedChartTypes>
+        <supportedChartTypes>02cfccc4-4843-11ec-81d3-0242ac130003</supportedChartTypes>
+        <outputDefinitions>
+            <name>numberOfUserForCreation</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Creation</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Création</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+        </outputDefinitions>
+        <outputDefinitions>
+            <name>numberOfUserForUpdate</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Update</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Mise à jour</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+        </outputDefinitions>
+        <outputDefinitions>
+            <name>numberOfUserForDeletion</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Delete</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Suppression</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+        </outputDefinitions>
+        <enableLinkedRecords>false</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>false</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>true</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>35ddf5a3-6086-4685-8b2c-3cc5fe766fb9</id>
+        <code>[built-in] F08</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Maximum length</label>
+                <description>Returns the length of the longest field value.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Taille maximale</label>
+                <description>Retourne la longueur de la valeur de champ la plus longue.</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>7acfa51b-ba65-49ae-99cb-71bc5ae0a0bb</applyOn>
+        <defaultChartType>1e76f993-9799-4643-98db-459d17130245</defaultChartType>
+        <supportedChartTypes>1e76f993-9799-4643-98db-459d17130245</supportedChartTypes>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <supportedChartTypes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</supportedChartTypes>
+        <inputDefinitions>
+            <name>countWhitespaceAsOneSize</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Count white spaces as 1 size</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Compter les espaces blancs</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>boolean</type>
+            <multiValued>false</multiValued>
+            <values>true</values>
+        </inputDefinitions>
+        <outputDefinitions>
+            <name>maxLength</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Length of the longest field value</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Longueur de la valeur de champ la plus longue</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+        </outputDefinitions>
+        <enableLinkedRecords>true</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>true</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>3d51ef48-e1bf-4dae-a2c7-c31bc91e3d70</id>
+        <code>[built-in] T03</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Table validation report</label>
+                <description>Executes the validation report on a table and saves the number of fatal errors, errors, warnings and information.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Rapport de validation d'une table</label>
+                <description>Exécute le rapport de validation sur une table et enregistre le nombre d'erreurs fatales, d'erreurs, d'avertissements et d'informations.</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>f89e668f-f415-4747-bbe0-6b839021060c</applyOn>
+        <defaultChartType>59c0ddef-d3f1-4852-a52b-4648cc76abd8</defaultChartType>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <supportedChartTypes>e80e1d72-622c-4210-ae5a-b721b505aae6</supportedChartTypes>
+        <supportedChartTypes>3297d6d7-84c7-4d81-a79f-6bec53359a9d</supportedChartTypes>
+        <supportedChartTypes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</supportedChartTypes>
+        <supportedChartTypes>02cfccc4-4843-11ec-81d3-0242ac130003</supportedChartTypes>
+        <outputDefinitions>
+            <name>numberOfFatal</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Fatal error</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Erreur fatale</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+        </outputDefinitions>
+        <outputDefinitions>
+            <name>numberOfError</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Error</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Erreur</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+        </outputDefinitions>
+        <outputDefinitions>
+            <name>numberOfWarning</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Warning</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Avertissement</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+        </outputDefinitions>
+        <outputDefinitions>
+            <name>numberOfInfo</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Information</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Information</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+        </outputDefinitions>
+        <enableLinkedRecords>true</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>true</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>3e333868-7a9b-44fc-b16b-f6eac8cbee34</id>
+        <code>[built-in] F16</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Range of a field's values</label>
+                <description>Computes the difference between the highest value and the lowest value of a numeric series.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Plage de valeurs d'un champ</label>
+                <description>Calcule la différence entre la valeur la plus élevée et la valeur la plus basse d'une série numérique.</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>7acfa51b-ba65-49ae-99cb-71bc5ae0a0bb</applyOn>
+        <defaultChartType>1e76f993-9799-4643-98db-459d17130245</defaultChartType>
+        <supportedChartTypes>1e76f993-9799-4643-98db-459d17130245</supportedChartTypes>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <supportedChartTypes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</supportedChartTypes>
+        <outputDefinitions>
+            <name>rangeOfFieldValues</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Range of a field's values</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Plage de valeurs d'un champ</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>decimal</type>
+        </outputDefinitions>
+        <enableLinkedRecords>false</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>true</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>3e8b627e-94a8-4a7c-a0e5-23157786d562</id>
+        <code>[built-in] T08</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Table freshness</label>
+                <description>Computes table freshness (the average of each record's freshness score). A record's score is calculated using the following method: subtract the indicator's last execution date from the record's last modification date. The lower the score, the fresher the data.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Fraîcheur de la table</label>
+                <description>Calcule la fraîcheur de la table (la moyenne du score de fraîcheur de chaque enregistrement). Le score d'un enregistrement est calculé selon la méthode suivante : soustraire la date de dernière exécution de l'indicateur à la date de dernière modification de l'enregistrement. Plus le score est bas, plus les données sont fraîches.</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>f89e668f-f415-4747-bbe0-6b839021060c</applyOn>
+        <defaultChartType>1e76f993-9799-4643-98db-459d17130245</defaultChartType>
+        <supportedChartTypes>1e76f993-9799-4643-98db-459d17130245</supportedChartTypes>
+        <outputDefinitions>
+            <name>outputTableFreshness</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Table freshness (in days)</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Fraîcheur de la table (en jours)</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>decimal</type>
+        </outputDefinitions>
+        <enableLinkedRecords>false</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>false</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>42d60a3b-d4ac-42f1-98cb-b9bd516d06a3</id>
+        <code>[built-in] F02</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Least frequent values</label>
+                <description>Computes the least frequently occurring values for a field.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Valeurs les moins fréquentes</label>
+                <description>Calcule les valeurs les moins fréquentes pour un champ.</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>7acfa51b-ba65-49ae-99cb-71bc5ae0a0bb</applyOn>
+        <defaultChartType>59c0ddef-d3f1-4852-a52b-4648cc76abd8</defaultChartType>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <supportedChartTypes>e80e1d72-622c-4210-ae5a-b721b505aae6</supportedChartTypes>
+        <supportedChartTypes>3297d6d7-84c7-4d81-a79f-6bec53359a9d</supportedChartTypes>
+        <supportedChartTypes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</supportedChartTypes>
+        <supportedChartTypes>6bff6e32-678a-4a06-98cd-f066ea730947</supportedChartTypes>
+        <supportedChartTypes>02cfccc4-4843-11ec-81d3-0242ac130003</supportedChartTypes>
+        <inputDefinitions>
+            <name>maximumNumberOfOutput</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Maximum number of output</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Nombre maximum de résultats</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+            <multiValued>false</multiValued>
+            <values>3</values>
+        </inputDefinitions>
+        <outputDefinitions>
+            <name>leastFrequentValues</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Least frequent values</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Valeurs les moins fréquentes</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>string</type>
+        </outputDefinitions>
+        <outputDefinitions>
+            <name>numberOfRecordsByValue</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Number of records by value</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Nombre d'enregistrements par valeur</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+        </outputDefinitions>
+        <enableLinkedRecords>true</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>true</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>4557ef19-4219-483c-8d28-fcf92eadec4b</id>
+        <code>[built-in] F04</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Not null count</label>
+                <description>Computes the number of not null values for a field.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Nombre de valeurs non nulles</label>
+                <description>Calcule le nombre de valeurs non nulles pour un champ.</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>7acfa51b-ba65-49ae-99cb-71bc5ae0a0bb</applyOn>
+        <defaultChartType>1e76f993-9799-4643-98db-459d17130245</defaultChartType>
+        <supportedChartTypes>1e76f993-9799-4643-98db-459d17130245</supportedChartTypes>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <supportedChartTypes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</supportedChartTypes>
+        <outputDefinitions>
+            <name>numberOfNotNullValues</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Number of not null values</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Nombre de valeurs non nulles</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+        </outputDefinitions>
+        <enableLinkedRecords>true</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>true</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>486bebd1-60f3-4f17-a8c4-7bce220ea33b</id>
+        <code>[built-in] F12</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Lowest value</label>
+                <description>Returns the lowest value from a given field. It returns 'NULL' if all values are null.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Plus petite valeur</label>
+                <description>Renvoie la plus petite valeur d'un champ donné. Elle renvoie 'NULL' si toutes les valeurs sont nulles.</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>7acfa51b-ba65-49ae-99cb-71bc5ae0a0bb</applyOn>
+        <defaultChartType>1e76f993-9799-4643-98db-459d17130245</defaultChartType>
+        <supportedChartTypes>1e76f993-9799-4643-98db-459d17130245</supportedChartTypes>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <supportedChartTypes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</supportedChartTypes>
+        <outputDefinitions>
+            <name>lowestFieldValue</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Lowest field value</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Valeur de champ la plus faible</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>decimal</type>
+        </outputDefinitions>
+        <enableLinkedRecords>true</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>true</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>48d04777-abfc-4605-a505-97427d601d18</id>
+        <code>[built-in] F20</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Patterns</label>
+                <description>Identify the most common formats ("L" is a letter, "D" a digit). It will display the most common formats.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Patterns</label>
+                <description>Identifier les formats les plus courants ("L" est une lettre, "D" un chiffre). Il affichera les formats les plus courants.</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>7acfa51b-ba65-49ae-99cb-71bc5ae0a0bb</applyOn>
+        <defaultChartType>02cfccc4-4843-11ec-81d3-0242ac130003</defaultChartType>
+        <supportedChartTypes>02cfccc4-4843-11ec-81d3-0242ac130003</supportedChartTypes>
+        <supportedChartTypes>e80e1d72-622c-4210-ae5a-b721b505aae6</supportedChartTypes>
+        <outputDefinitions>
+            <name>formatValue</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Format value</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Valeur du format</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>string</type>
+        </outputDefinitions>
+        <outputDefinitions>
+            <name>countValue</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Count</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Compter</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+        </outputDefinitions>
+        <enableLinkedRecords>true</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>false</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>4f1c9ac5-1328-4862-af3f-393935d88ad4</id>
+        <code>[built-in] T02</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Completeness rate</label>
+                <description>Computes the completeness rate of a table.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Taux de complétude</label>
+                <description>Retourne de taux de complétude d'une table.</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>f89e668f-f415-4747-bbe0-6b839021060c</applyOn>
+        <defaultChartType>1e76f993-9799-4643-98db-459d17130245</defaultChartType>
+        <supportedChartTypes>1e76f993-9799-4643-98db-459d17130245</supportedChartTypes>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <supportedChartTypes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</supportedChartTypes>
+        <outputDefinitions>
+            <name>completenessRate</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Completeness rate</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Taux de complétude</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>percent</type>
+        </outputDefinitions>
+        <enableLinkedRecords>false</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>true</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>500ef7a2-d453-4369-919d-1a2c83bc7eb9</id>
+        <code>[built-in] T07</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Number of missing values</label>
+                <description>Counts of the number of missing value for a table (it computes the number of missing value in each field and for each record in the table).</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Nombre de valeurs manquantes</label>
+                <description>Compte le nombre de valeurs manquantes pour une table (icalcule le nombre de valeurs manquantes dans chaque champ et pour chaque enregistrement de la table).</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>f89e668f-f415-4747-bbe0-6b839021060c</applyOn>
+        <defaultChartType>1e76f993-9799-4643-98db-459d17130245</defaultChartType>
+        <supportedChartTypes>1e76f993-9799-4643-98db-459d17130245</supportedChartTypes>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <supportedChartTypes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</supportedChartTypes>
+        <outputDefinitions>
+            <name>numberOfMissingValues</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Number of missing values</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Nombre de valeurs manquantes</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+        </outputDefinitions>
+        <enableLinkedRecords>true</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>true</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>54e91d28-65ea-4803-824b-67a3e71e84c7</id>
+        <code>[built-in] T06</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Last modification date</label>
+                <description>Provides the last update date of the asset.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Date de dernière modification</label>
+                <description>Retourne la dernière date de mise à jour de la table.</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>f89e668f-f415-4747-bbe0-6b839021060c</applyOn>
+        <defaultChartType>1e76f993-9799-4643-98db-459d17130245</defaultChartType>
+        <supportedChartTypes>1e76f993-9799-4643-98db-459d17130245</supportedChartTypes>
+        <outputDefinitions>
+            <name>lastModificationDate</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Last modification date</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Date de dernière modification</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>dateTime</type>
+        </outputDefinitions>
+        <enableLinkedRecords>false</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>true</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>5ad7d81b-d95e-43db-ac64-bbbf09460e77</id>
+        <code>[built-in] F01</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Most frequent values</label>
+                <description>Computes the most frequently occurring values for a field.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Valeurs les plus fréquentes</label>
+                <description>Calcule les valeurs les plus fréquentes pour un champ.</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>7acfa51b-ba65-49ae-99cb-71bc5ae0a0bb</applyOn>
+        <defaultChartType>59c0ddef-d3f1-4852-a52b-4648cc76abd8</defaultChartType>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <supportedChartTypes>e80e1d72-622c-4210-ae5a-b721b505aae6</supportedChartTypes>
+        <supportedChartTypes>3297d6d7-84c7-4d81-a79f-6bec53359a9d</supportedChartTypes>
+        <supportedChartTypes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</supportedChartTypes>
+        <supportedChartTypes>6bff6e32-678a-4a06-98cd-f066ea730947</supportedChartTypes>
+        <supportedChartTypes>02cfccc4-4843-11ec-81d3-0242ac130003</supportedChartTypes>
+        <inputDefinitions>
+            <name>maximumNumberOfOutput</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Maximum number of output</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Nombre maximum de résultats</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+            <multiValued>false</multiValued>
+            <values>3</values>
+        </inputDefinitions>
+        <outputDefinitions>
+            <name>mostFrequentValues</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Most frequent values</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Valeurs les plus fréquentes</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>string</type>
+        </outputDefinitions>
+        <outputDefinitions>
+            <name>numberOfRecordsByValue</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Number of records by value</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Nombre d'enregistrements par valeur</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+        </outputDefinitions>
+        <enableLinkedRecords>true</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>true</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>5b9df56b-1b10-4291-8bb9-0077394aaf65</id>
+        <code>[built-in] T04</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Number of operations</label>
+                <description>Computes the number of created, updated, and deleted records for given table.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Nombre d'opérations</label>
+                <description>Calcule le nombre d'enregistrements créés, mis à jour et supprimés pour une table donnée.</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>f89e668f-f415-4747-bbe0-6b839021060c</applyOn>
+        <defaultChartType>59c0ddef-d3f1-4852-a52b-4648cc76abd8</defaultChartType>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <supportedChartTypes>e80e1d72-622c-4210-ae5a-b721b505aae6</supportedChartTypes>
+        <supportedChartTypes>3297d6d7-84c7-4d81-a79f-6bec53359a9d</supportedChartTypes>
+        <supportedChartTypes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</supportedChartTypes>
+        <supportedChartTypes>02cfccc4-4843-11ec-81d3-0242ac130003</supportedChartTypes>
+        <outputDefinitions>
+            <name>numberOfCreations</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Number of creations</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Nombre de créations</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+        </outputDefinitions>
+        <outputDefinitions>
+            <name>numberOfUpdates</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Number of updates</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Nombre de mises à jour</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+        </outputDefinitions>
+        <outputDefinitions>
+            <name>numberOfDeletions</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Number of deletions</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Nombre de suppressions</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+        </outputDefinitions>
+        <enableLinkedRecords>true</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>false</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>true</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>617aa84e-ee33-4226-a4e5-55200734dad1</id>
+        <code>[built-in] F13</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Average of values</label>
+                <description>Computes the sum of all field values divided by the number of non-null values. It returns 'NULL' if all values are null.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Moyenne des valeurs</label>
+                <description>Calcule la somme de toutes les valeurs d'un champ divisée par le nombre de valeurs non nulles. Elle renvoie 'NULL' si toutes les valeurs sont nulles.</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>7acfa51b-ba65-49ae-99cb-71bc5ae0a0bb</applyOn>
+        <defaultChartType>1e76f993-9799-4643-98db-459d17130245</defaultChartType>
+        <supportedChartTypes>1e76f993-9799-4643-98db-459d17130245</supportedChartTypes>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <supportedChartTypes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</supportedChartTypes>
+        <outputDefinitions>
+            <name>averageOfFieldValues</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Field value average</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Moyenne des valeurs d'un champ</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>decimal</type>
+        </outputDefinitions>
+        <enableLinkedRecords>false</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>true</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>6c129907-43fb-452e-a12f-5199df69571f</id>
+        <code>[built-in] F11</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Highest value</label>
+                <description>Returns the highest value from a given field. It returns 'NULL' if all values are null.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Valeur la plus élevée</label>
+                <description>Renvoie la valeur la plus élevée d'un champ donné. Elle renvoie 'NULL' si toutes les valeurs sont nulles.</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>7acfa51b-ba65-49ae-99cb-71bc5ae0a0bb</applyOn>
+        <defaultChartType>1e76f993-9799-4643-98db-459d17130245</defaultChartType>
+        <supportedChartTypes>1e76f993-9799-4643-98db-459d17130245</supportedChartTypes>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <supportedChartTypes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</supportedChartTypes>
+        <outputDefinitions>
+            <name>highestFieldValue</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Highest field value</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Valeur de champ la plus élevée</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>decimal</type>
+        </outputDefinitions>
+        <enableLinkedRecords>true</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>true</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>805eb35f-b82c-4ec1-acd3-db931d3be79f</id>
+        <code>[built-in] W04</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Longest task duration</label>
+                <description>Computes the longest task duration for a workflow publication. Only manual tasks are computed. The duration is the difference between the starting date and time and the completed states.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>La plus longue durée d'une tâche</label>
+                <description>Calcule la durée de tâche la plus longue pour une publication de workflow. Seules les tâches manuelles sont calculées. La durée est la différence entre la date et l'heure de début des tâches terminés.</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>38460bcc-1446-448c-9b57-cc6fd42f31fb</applyOn>
+        <defaultChartType>59c0ddef-d3f1-4852-a52b-4648cc76abd8</defaultChartType>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <supportedChartTypes>1e76f993-9799-4643-98db-459d17130245</supportedChartTypes>
+        <supportedChartTypes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</supportedChartTypes>
+        <inputDefinitions>
+            <name>user</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>User</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Utilisateur</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>profile</type>
+            <multiValued>false</multiValued>
+            <values>Beveryone</values>
+        </inputDefinitions>
+        <inputDefinitions>
+            <name>calculateFromOfferOrAllocatedMoment</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Calculate from the offered or allocated moment</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Calculer à partir du moment offert ou alloué</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>boolean</type>
+            <multiValued>false</multiValued>
+            <values>true</values>
+        </inputDefinitions>
+        <outputDefinitions>
+            <name>taskName</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Task name</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Nom de la tâche</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>string</type>
+        </outputDefinitions>
+        <outputDefinitions>
+            <name>durationOfExecution</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Duration of execution</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Durée d'execution</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>interval</type>
+        </outputDefinitions>
+        <enableLinkedRecords>false</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>false</enableFilter>
+        <enableAlert>false</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>8b645125-2b9c-40a9-b295-ed2fdbd9079e</id>
+        <code>[built-in] F06</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Unique count</label>
+                <description>Computes the number of values that occur only once.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Nombre de valeurs uniques</label>
+                <description>Calcule le nombre de valeurs qui n'apparaissent qu'une seule fois.</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>7acfa51b-ba65-49ae-99cb-71bc5ae0a0bb</applyOn>
+        <defaultChartType>1e76f993-9799-4643-98db-459d17130245</defaultChartType>
+        <supportedChartTypes>1e76f993-9799-4643-98db-459d17130245</supportedChartTypes>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <supportedChartTypes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</supportedChartTypes>
+        <outputDefinitions>
+            <name>numberOfUniqueValues</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Number of unique values</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Nombre de valeurs uniques</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+        </outputDefinitions>
+        <enableLinkedRecords>true</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>true</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>a79e878f-a3d6-4763-82f6-030276b7fca8</id>
+        <code>[built-in] W07</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Completed workflow instances since last execution</label>
+                <description>Provides reporting on the number of workflow instances closed during a period of time (time elapsed since 2 executions of the workflow). Coupled with the scheduler it can provide information on the efficiency of a team to process a particular workflow over time.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Instances de workflow terminées depuis la dernière exécution</label>
+                <description>Fournit un rapport sur le nombre d'instances de workflow fermées pendant une période donnée (temps écoulé depuis 2 exécutions du workflow). Associé au planificateur, il peut fournir des informations sur l'efficacité d'une équipe à traiter un flux de travail particulier au fil du temps.</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>38460bcc-1446-448c-9b57-cc6fd42f31fb</applyOn>
+        <defaultChartType>1e76f993-9799-4643-98db-459d17130245</defaultChartType>
+        <supportedChartTypes>1e76f993-9799-4643-98db-459d17130245</supportedChartTypes>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <supportedChartTypes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</supportedChartTypes>
+        <outputDefinitions>
+            <name>numberCompletedWorflowInstances</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Number of completed workflow instances</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Nombre d'instances de workflow terminées</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+        </outputDefinitions>
+        <enableLinkedRecords>false</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>false</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>af1b0523-db77-4d46-9181-20710e98755a</id>
+        <code>[built-in] W03</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Task average processing time for a workflow publication</label>
+                <description>Computes the average processing time of each task for all the instances of a workflow publication. The processing time is the difference between the started date and the completed date (interval). A not completed task is ignored in the computation. It is possible to select one or multiple tasks to monitor. It is also possible to configure a user when the computation must be applied to only a user.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Temps de traitement moyen d'une tâche pour une publication de workflow</label>
+                <description>Calcule le temps de traitement moyen de chaque tâche pour toutes les instances d'une publication de workflow. Le temps de traitement est la différence entre la date de début et la date de fin (intervalle). Une tâche non terminée est ignorée dans le calcul. Il est également possible de configurer un utilisateur lorsque le calcul doit être appliqué uniquement à un utilisateur.</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>38460bcc-1446-448c-9b57-cc6fd42f31fb</applyOn>
+        <defaultChartType>59c0ddef-d3f1-4852-a52b-4648cc76abd8</defaultChartType>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <supportedChartTypes>e80e1d72-622c-4210-ae5a-b721b505aae6</supportedChartTypes>
+        <supportedChartTypes>3297d6d7-84c7-4d81-a79f-6bec53359a9d</supportedChartTypes>
+        <supportedChartTypes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</supportedChartTypes>
+        <supportedChartTypes>02cfccc4-4843-11ec-81d3-0242ac130003</supportedChartTypes>
+        <inputDefinitions>
+            <name>user</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>User</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Utilisateur</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>profile</type>
+            <multiValued>false</multiValued>
+            <values>Beveryone</values>
+        </inputDefinitions>
+        <inputDefinitions>
+            <name>calculateFromOfferOrAllocatedMoment</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Calculate from the offered or allocated moment</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Calculer à partir du moment offert ou alloué</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>boolean</type>
+            <multiValued>false</multiValued>
+            <values>true</values>
+        </inputDefinitions>
+        <outputDefinitions>
+            <name>taskName</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Task name</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Nom de la tâche</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>string</type>
+        </outputDefinitions>
+        <outputDefinitions>
+            <name>averageProcessingTime</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Average processing time</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Délai moyen de traitement</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>interval</type>
+        </outputDefinitions>
+        <enableLinkedRecords>false</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>false</enableFilter>
+        <enableAlert>false</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>b4e0e1ff-88a3-4fd6-980f-8a4a60636237</id>
+        <code>[built-in] F05</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Distinct value count</label>
+                <description>Computes the number of distinct values in a given field.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Valeurs distinctes</label>
+                <description>Calcule le nombre de valeurs distinctes dans un champ.</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>7acfa51b-ba65-49ae-99cb-71bc5ae0a0bb</applyOn>
+        <defaultChartType>1e76f993-9799-4643-98db-459d17130245</defaultChartType>
+        <supportedChartTypes>1e76f993-9799-4643-98db-459d17130245</supportedChartTypes>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <supportedChartTypes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</supportedChartTypes>
+        <outputDefinitions>
+            <name>numberOfDistinctValues</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Number of distinct values</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Nombre de valeurs distinctes.</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+        </outputDefinitions>
+        <enableLinkedRecords>true</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>true</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>b789c65e-06b2-4c70-aaca-982bcd16da62</id>
+        <code>[built-in] T01</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Table record count</label>
+                <description>Calculates the number of records in a table.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Nombre d'enregistrements d'une table</label>
+                <description>Retoune de nombre d'enregistrements d'une table.</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>f89e668f-f415-4747-bbe0-6b839021060c</applyOn>
+        <defaultChartType>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</defaultChartType>
+        <supportedChartTypes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</supportedChartTypes>
+        <supportedChartTypes>e80e1d72-622c-4210-ae5a-b721b505aae6</supportedChartTypes>
+        <supportedChartTypes>1e76f993-9799-4643-98db-459d17130245</supportedChartTypes>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <supportedChartTypes>3297d6d7-84c7-4d81-a79f-6bec53359a9d</supportedChartTypes>
+        <supportedChartTypes>6bff6e32-678a-4a06-98cd-f066ea730947</supportedChartTypes>
+        <supportedChartTypes>02cfccc4-4843-11ec-81d3-0242ac130003</supportedChartTypes>
+        <outputDefinitions>
+            <name>numberOfRecords</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Number of records</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Nombre d'enregistrements</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+        </outputDefinitions>
+        <enableLinkedRecords>true</enableLinkedRecords>
+        <enableGrouping>true</enableGrouping>
+        <enableFilter>true</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>bfccedca-c243-4a57-bfbc-945778f58898</id>
+        <code>[built-in] F21</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Number Value Distribution</label>
+                <description>Reports all the distinct number values in the selected column and number of rows (number of counts) in the table that each value represents Number Value Distribution.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Distribution de la valeur numérique</label>
+                <description>Indique toutes les valeurs numériques distinctes dans la colonne sélectionnée et le nombre de lignes (nombre de comptes) dans la table que chaque valeur représente la Distribution des valeurs numériques.</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>7acfa51b-ba65-49ae-99cb-71bc5ae0a0bb</applyOn>
+        <defaultChartType>59c0ddef-d3f1-4852-a52b-4648cc76abd8</defaultChartType>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <inputDefinitions>
+            <name>maximumNumberOfOutput</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Maximum number of output</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Nombre maximum de résultats</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+            <multiValued>false</multiValued>
+            <values>10</values>
+        </inputDefinitions>
+        <outputDefinitions>
+            <name>distinctNumberValues</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Distinct number values</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Valeurs numériques distinctes</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>string</type>
+        </outputDefinitions>
+        <outputDefinitions>
+            <name>numberOfCountsByNumberValue</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Number of counts by number value</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Nombre de comptages par valeur numérique</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+        </outputDefinitions>
+        <enableLinkedRecords>true</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>false</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>d7316bbe-a3ad-40f0-9f3d-1259bbd3b733</id>
+        <code>[built-in] F23</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Duplicate count</label>
+                <description>Computes the number of duplicate value for a field. Duplicate value is the repeated value (that already exist in the column).</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Nombre de doublons</label>
+                <description>Calcule le nombre de valeurs doublons pour un champ. La valeur doublon est la valeur répétée (qui existe déjà dans la colonne).</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>7acfa51b-ba65-49ae-99cb-71bc5ae0a0bb</applyOn>
+        <defaultChartType>1e76f993-9799-4643-98db-459d17130245</defaultChartType>
+        <supportedChartTypes>1e76f993-9799-4643-98db-459d17130245</supportedChartTypes>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <supportedChartTypes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</supportedChartTypes>
+        <outputDefinitions>
+            <name>numberOfDuplicateValues</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Number of duplicate values</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Nombre de valeurs doublons</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+        </outputDefinitions>
+        <enableLinkedRecords>true</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>true</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>f0a7b2d1-1fd1-4517-80ae-b618bcec50ca</id>
+        <code>[built-in] F03</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Null count</label>
+                <description>Computes the number of null values for a field.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Nombre de valeurs nulles</label>
+                <description>Calcule le nombre de valeurs nulles pour un champ.</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>7acfa51b-ba65-49ae-99cb-71bc5ae0a0bb</applyOn>
+        <defaultChartType>1e76f993-9799-4643-98db-459d17130245</defaultChartType>
+        <supportedChartTypes>1e76f993-9799-4643-98db-459d17130245</supportedChartTypes>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <supportedChartTypes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</supportedChartTypes>
+        <outputDefinitions>
+            <name>numberOfNullValues</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Number of null values</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Nombre de valeurs nulles</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>integer</type>
+        </outputDefinitions>
+        <enableLinkedRecords>true</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>true</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>ff31998c-da37-4007-afc3-aece908ce4de</id>
+        <code>[built-in] F14</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Field length statistics</label>
+                <description>Computes the highest, lowest, and average field lengths.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Statistiques de longueur de champ</label>
+                <description>Calcule les plus petite, plus grande et moyenne longueurs de champ.</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>7acfa51b-ba65-49ae-99cb-71bc5ae0a0bb</applyOn>
+        <defaultChartType>59c0ddef-d3f1-4852-a52b-4648cc76abd8</defaultChartType>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <supportedChartTypes>e80e1d72-622c-4210-ae5a-b721b505aae6</supportedChartTypes>
+        <supportedChartTypes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</supportedChartTypes>
+        <supportedChartTypes>02cfccc4-4843-11ec-81d3-0242ac130003</supportedChartTypes>
+        <inputDefinitions>
+            <name>countWhitespaceAsOneSize</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Count white spaces as 1 size</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Compter les espaces blancs</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>boolean</type>
+            <multiValued>false</multiValued>
+            <values>true</values>
+        </inputDefinitions>
+        <outputDefinitions>
+            <name>minLength</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Min length</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Longueur minimale</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>decimal</type>
+        </outputDefinitions>
+        <outputDefinitions>
+            <name>maxLength</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Max length</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Longueur maximale</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>decimal</type>
+        </outputDefinitions>
+        <outputDefinitions>
+            <name>averageLength</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Average length</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Longueur moyenne</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>decimal</type>
+        </outputDefinitions>
+        <enableLinkedRecords>false</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>true</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+    <Function>
+        <id>ff743e35-ea89-44c2-9d44-54e29f2849e6</id>
+        <code>[built-in] F10</code>
+        <definition>com.orchestranetworks.addon.dpra.function.BuiltinFunctionDefinition</definition>
+        <labelDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Average length</label>
+                <description>Computes the average length of a field value: Sum of length of all distinct values of a field divided by the number of distinct values.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Longueur moyenne</label>
+                <description>Calcule la longueur moyenne d'une valeur de champ: somme de la longueur de toutes les valeurs distinctes d'un champ divisée par le nombre de valeurs distinctes.</description>
+            </localizedDocumentations>
+        </labelDescription>
+        <applyOn>7acfa51b-ba65-49ae-99cb-71bc5ae0a0bb</applyOn>
+        <defaultChartType>1e76f993-9799-4643-98db-459d17130245</defaultChartType>
+        <supportedChartTypes>1e76f993-9799-4643-98db-459d17130245</supportedChartTypes>
+        <supportedChartTypes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</supportedChartTypes>
+        <supportedChartTypes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</supportedChartTypes>
+        <inputDefinitions>
+            <name>countWhitespaceAsOneSize</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Count white spaces as 1 size</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Compter les espaces blancs</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>boolean</type>
+            <multiValued>false</multiValued>
+            <values>true</values>
+        </inputDefinitions>
+        <outputDefinitions>
+            <name>averageLength</name>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Average length of a field value</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Longueur moyenne des valeurs d'un champ</label>
+                </localizedDocumentations>
+            </labelDescription>
+            <type>decimal</type>
+        </outputDefinitions>
+        <enableLinkedRecords>false</enableLinkedRecords>
+        <enableGrouping>false</enableGrouping>
+        <enableFilter>true</enableFilter>
+        <enableAlert>true</enableAlert>
+        <enableComputationPeriodicity>false</enableComputationPeriodicity>
+    </Function>
+</root>

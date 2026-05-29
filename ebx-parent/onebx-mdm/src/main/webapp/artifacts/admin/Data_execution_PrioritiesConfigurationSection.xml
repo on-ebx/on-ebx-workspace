@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+    <technicalConfiguration>
+        <PrioritiesConfigurationSection>
+            <priorities>
+                <level>-2</level>
+                <documentation>
+                    <localizedDocumentations>
+                        <locale>en_US</locale>
+                        <label>Very low</label>
+                    </localizedDocumentations>
+                    <localizedDocumentations>
+                        <locale>fr_FR</locale>
+                        <label>Très peu prioritaire</label>
+                    </localizedDocumentations>
+                </documentation>
+                <priorityIcon>
+                    <builtInIcon>ebx_workflow_priority ebx_workflow_priority_lower</builtInIcon>
+                </priorityIcon>
+            </priorities>
+            <priorities>
+                <level>-1</level>
+                <documentation>
+                    <localizedDocumentations>
+                        <locale>en_US</locale>
+                        <label>Low</label>
+                    </localizedDocumentations>
+                    <localizedDocumentations>
+                        <locale>fr_FR</locale>
+                        <label>Peu prioritaire</label>
+                    </localizedDocumentations>
+                </documentation>
+                <priorityIcon>
+                    <builtInIcon>ebx_workflow_priority ebx_workflow_priority_low</builtInIcon>
+                </priorityIcon>
+            </priorities>
+            <priorities>
+                <level>0</level>
+                <documentation>
+                    <localizedDocumentations>
+                        <locale>en_US</locale>
+                        <label>Normal</label>
+                    </localizedDocumentations>
+                    <localizedDocumentations>
+                        <locale>fr_FR</locale>
+                        <label>Normal</label>
+                    </localizedDocumentations>
+                </documentation>
+                <priorityIcon>
+                    <builtInIcon>ebx_workflow_priority ebx_workflow_priority_normal</builtInIcon>
+                </priorityIcon>
+            </priorities>
+            <priorities>
+                <level>1</level>
+                <documentation>
+                    <localizedDocumentations>
+                        <locale>en_US</locale>
+                        <label>High</label>
+                    </localizedDocumentations>
+                    <localizedDocumentations>
+                        <locale>fr_FR</locale>
+                        <label>Important</label>
+                    </localizedDocumentations>
+                </documentation>
+                <priorityIcon>
+                    <builtInIcon>ebx_workflow_priority ebx_workflow_priority_high</builtInIcon>
+                </priorityIcon>
+            </priorities>
+            <priorities>
+                <level>2</level>
+                <documentation>
+                    <localizedDocumentations>
+                        <locale>en_US</locale>
+                        <label>Very high</label>
+                    </localizedDocumentations>
+                    <localizedDocumentations>
+                        <locale>fr_FR</locale>
+                        <label>Très important</label>
+                    </localizedDocumentations>
+                </documentation>
+                <priorityIcon>
+                    <builtInIcon>ebx_workflow_priority ebx_workflow_priority_higher</builtInIcon>
+                </priorityIcon>
+            </priorities>
+            <priorities>
+                <level>3</level>
+                <documentation>
+                    <localizedDocumentations>
+                        <locale>en_US</locale>
+                        <label>Urgent</label>
+                    </localizedDocumentations>
+                    <localizedDocumentations>
+                        <locale>fr_FR</locale>
+                        <label>Urgent</label>
+                    </localizedDocumentations>
+                </documentation>
+                <priorityIcon>
+                    <builtInIcon>ebx_workflow_priority ebx_workflow_priority_urgent</builtInIcon>
+                </priorityIcon>
+            </priorities>
+        </PrioritiesConfigurationSection>
+    </technicalConfiguration>
+</root>

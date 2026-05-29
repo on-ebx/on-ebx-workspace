@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+    <function>
+        <fieldPath>/root/Companies/AdditionalInformation/active</fieldPath>
+        <revisionDate>2025-06-24T10:38:48.398</revisionDate>
+        <revisionUser>admin</revisionUser>
+        <indexed>false</indexed>
+        <script>uses core.date as date;
+export function getValue(): boolean
+begin
+if (date.days(_ebx.record.AdditionalInformation.endOfValidity,date.now())>0)
+then return false;
+else
+return true;
+
+end
+</script>
+    </function>
+    <trigger>
+        <tablePath>/root/Companies</tablePath>
+        <name>EnrichAddressBeforeCreation</name>
+        <revisionId>1805427924818944</revisionId>
+        <revisionDate>2025-11-14T10:40:07.831</revisionDate>
+        <revisionUser>admin</revisionUser>
+        <script>uses core.http as client;
+uses core.json as json;
+uses core.list as list;
+uses core.log as log;
+uses core.http as http;
+
+export procedure onBeforeCreate()
+begin
+	
+	var request := client.createRequest('GoogleMaps');
+	var apiKey := http.getConfigValue(request, 'Key');
+	
+	//Test if you have provided a key
+	if not isNull(apiKey) then
+	begin
+		//Get the address values from the record
+		
+		var number := _ebx.record.Address.Number;
+		var street := _ebx.record.Address.Street;
+		var zipcode := _ebx.record.Address.Zipcode;
+		var city := _ebx.record.Address.City;
+		var country := _ebx.record.Address.Country;
+		
+		
+		// create the complete address by concatenating the address values
+		var completeaddress := number | ' ' | street | ' ' | zipcode | ' ' | city | ' ' | country.Alpha2Code ;
+		
+		// create a request to call API REST https://maps.googleapis.com/maps/api/geocode/json?address=ADDRESS&amp;key=YOUR_API_KEY
+		log.info(completeaddress);
+		
+		client.addParameter(request, 'address', completeaddress);
+		client.addParameter(request, 'key', apiKey);
+		// send GET request
+		var response := client.get(request);
+		var status := client.getStatusCode(response);
+		// read the response
+		var body := client.getJsonBody(response).asObject;
+		var results := json.getArray(body, 'results');
+		
+		if(not(list.isEmpty(results))) then
+		begin
+			// get geometry
+			var geometry := json.getObject(results[0].asObject, 'geometry');
+			
+			var locationtype := json.getString(geometry, 'location_type');
+			
+			log.info(locationtype);
+			// get location
+			var location := json.getObject(geometry, 'location');
+			_ebx.record.Address.latitude := '' | json.getDecimal(location, 'lat');
+			_ebx.record.Address.longitude := '' | json.getDecimal(location, 'lng');
+		end
+		
+		
+	end
+	
+	
+end</script>
+    </trigger>
+    <trigger>
+        <tablePath>/root/Companies</tablePath>
+        <name>EnrichAddressBeforeUpdate</name>
+        <revisionId>1801530242316288</revisionId>
+        <revisionDate>2025-10-01T10:21:17.262</revisionDate>
+        <revisionUser>admin</revisionUser>
+        <script>uses core.http as client;
+uses core.json as json;
+uses core.list as list;
+uses core.log as log;
+uses core.http as http;
+
+
+export procedure onBeforeModify()
+begin
+	
+	var request := client.createRequest('GoogleMaps');
+	var apiKey := http.getConfigValue(request, 'Key');
+	
+	//Test if you have provided a key
+	if not isNull(apiKey) then
+	begin
+		//Get the address values from the record
+		
+		var number := _ebx.nextRecord.Address.Number;
+		var street := _ebx.nextRecord.Address.Street;
+		var zipcode := _ebx.nextRecord.Address.Zipcode;
+		var city := _ebx.nextRecord.Address.City;
+		var country := _ebx.nextRecord.Address.Country;
+		
+		// create the complete address by concatenating the address values
+		var completeaddress := number | ' ' | street | ' ' | zipcode | ' ' | city | ' ' | country.Alpha2Code ;
+		
+		// create a request to call API REST https://maps.googleapis.com/maps/api/geocode/json?address=ADDRESS&amp;key=YOUR_API_KEY
+		log.info(completeaddress);
+		client.addParameter(request, 'address', completeaddress);
+		client.addParameter(request, 'key', apiKey);
+		// send GET request
+		var response := client.get(request);
+		var status := client.getStatusCode(response);
+		// read the response
+		var body := client.getJsonBody(response).asObject;
+		var results := json.getArray(body, 'results');
+		
+		if(not(list.isEmpty(results))) then
+		begin
+			// get geometry
+			var geometry := json.getObject(results[0].asObject, 'geometry');
+			
+			var locationtype := json.getString(geometry, 'location_type');
+			
+			log.info(locationtype);
+			// get location
+			var location := json.getObject(geometry, 'location');
+			_ebx.nextRecord.Address.latitude := '' | json.getDecimal(location, 'lat');
+			_ebx.nextRecord.Address.longitude := '' | json.getDecimal(location, 'lng');
+		end
+		
+		
+	end
+	
+	
+	
+end</script>
+    </trigger>
+    <nodeConstraint>
+        <path>/root/Companies/BillingInformation/IBAN</path>
+        <name>IBANValidation</name>
+        <revisionId>1817648259316736</revisionId>
+        <revisionDate>2026-04-01T14:38:48.239</revisionDate>
+        <revisionUser>admin</revisionUser>
+        <script>uses core.message as messageContext;
+uses core.locale as locale;
+uses core.validation as validationContext;
+uses core.string as string;
+uses core.log as log;
+uses core.math as math;
+
+export procedure check(record : .Companies)
+begin
+var iban := string.toUpperCase(string.trim(record.BillingInformation.IBAN));
+	iban := string.replaceAll(iban, ' ', '');
+	
+	if(string.isEmpty(iban)) then
+	begin
+		var userMessage := messageContext.ofBundleWarning('companies', 'iban.not.set');
+		messageContext.addMessage(userMessage);
+	end
+	else
+	begin
+		var measured := iban | '#';
+		var len := string.indexOf(measured, '#');
+		
+		log.info('IBAN received: ' | iban | ' (length=' | string.valueOf(len) | ')');
+		
+		var onlyAlphaNum := string.replaceAll(iban, '[^A-Z0-9]', '');
+		var measuredClean := onlyAlphaNum | '#';
+		var cleanLen := string.indexOf(measuredClean, '#');
+		
+		if cleanLen &lt;&gt; len then
+		begin
+			var userMessage := messageContext.ofBundleError('companies', 'iban.invalid.caracters');
+			messageContext.addMessage(userMessage);
+		end
+		else if (len &lt; 15i) or (len > 34i) then
+		begin
+			var userMessage := messageContext.ofBundleError('companies', 'iban.invalid.length');
+			messageContext.addMessage(userMessage);
+		end
+		else
+		begin
+			var letters := 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+			var digits := '0123456789';
+			var c1 := string.substring(iban, 0i, 1i);
+			var c2 := string.substring(iban, 1i, 2i);
+			if (string.indexOf(letters, c1) &lt; 0i) or (string.indexOf(letters, c2) &lt; 0i) then
+			begin
+				
+				var userMessage := messageContext.ofBundleError('companies', 'iban.invalid.shouldStartWithIsoCode');
+				messageContext.addMessage(userMessage);
+			end
+			else
+			begin
+				var c3 := string.substring(iban, 2i, 3i);
+				var c4 := string.substring(iban, 3i, 4i);
+				if (string.indexOf(digits, c3) &lt; 0i) or (string.indexOf(digits, c4) &lt; 0i) then
+				begin
+					var userMessage := messageContext.ofBundleError('companies', 'iban.invalid.position3and4areControlKeys');
+					messageContext.addMessage(userMessage);
+				end
+				else
+				begin
+					var tail := string.substring(iban, 0i, 4i);
+					var body := string.substring(iban, 4i, len);
+					var rearranged := body | tail;
+					
+					var remainder := 0i;
+					var idx := 0i;
+					while idx &lt; len do
+					begin
+						var ch := string.substring(rearranged, idx, idx + 1i);
+						var letterPos := string.indexOf(letters, ch);
+						if letterPos >= 0i then
+						begin
+							var numVal := letterPos + 10i;
+							var t := remainder * 100i + numVal;
+							remainder := t - math.floor(t / 97i) * 97i;
+						end
+						else
+						begin
+							var digitPos := string.indexOf(digits, ch);
+							var t := remainder * 10i + digitPos;
+							remainder := t - math.floor(t / 97i) * 97i;
+						end
+						idx := idx + 1i;
+					end
+					
+					log.info('MOD-97 remainder: ' | string.valueOf(remainder));
+					
+					if remainder = 1i then
+					begin
+						
+					end
+					else
+					begin
+						var userMessage := messageContext.ofBundleError('companies', 'iban.invalid.mod97Fail');
+						messageContext.addMessage(userMessage);
+					end
+				end
+			end
+		end
+		
+	end
+end
+
+export procedure setup()
+begin 
+end
+</script>
+    </nodeConstraint>
+</root>

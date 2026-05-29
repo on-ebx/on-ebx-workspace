@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<search>
+    <association>
+        <searchTemplate>@default</searchTemplate>
+        <field>/root/Companies/BillingInformation/BIC</field>
+        <searchStrategy>@Code</searchStrategy>
+    </association>
+    <association>
+        <searchTemplate>@default</searchTemplate>
+        <field>/root/Companies/BillingInformation/IBAN</field>
+        <searchStrategy>@Code</searchStrategy>
+    </association>
+</search>

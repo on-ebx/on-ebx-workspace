@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<scheduler>
+    <task>
+        <name>DeleteExpiredStagingTemporaryFolders</name>
+        <documentation>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Delete expired temporary folders.</label>
+                <description>This task deletes the expired temporary folders created by staging.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Supprimer les dossiers temporaires expirés.</label>
+                <description>Cette tâche supprime les dossiers temporaires expirés créés par le staging.</description>
+            </localizedDocumentations>
+        </documentation>
+        <spec>
+            <module>ebx-dataservices</module>
+            <className>com.orchestranetworks.staging.repository.DeleteTemporaryFoldersTaskOnServer</className>
+        </spec>
+    </task>
+    <task>
+        <name>RepositoryExecutePurgeRequests</name>
+        <documentation>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Repository cleanup</label>
+                <description>This task executes the purge process on the repository.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Nettoyage du référentiel</label>
+                <description>Cette tâche exécute le processus de purge sur le référentiel.</description>
+            </localizedDocumentations>
+        </documentation>
+        <spec>
+            <className>com.orchestranetworks.scheduler.task.RepositoryPurgeAll</className>
+        </spec>
+    </task>
+    <task>
+        <name>SchedulerMarkDataspaceHistoryForPurge</name>
+        <documentation>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Mark dataspace history for purge</label>
+                <description>This task marks the history of a given dataspace for purge if it is older than the number of days specified.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Marquer l'historique de l'espace de données pour la purge</label>
+                <description>Cette tâche marque pour la purge l'historique d'un espace de données spécifique si celui-ci dépasse le nombre de jours indiqué.</description>
+            </localizedDocumentations>
+        </documentation>
+        <spec>
+            <className>com.orchestranetworks.scheduler.task.SchedulerMarkDataspaceHistoryForPurge</className>
+        </spec>
+    </task>
+    <task>
+        <name>SchedulerPurgeExecutionReports</name>
+        <documentation>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Purge scheduler execution reports</label>
+                <description>This task purges all execution reports of completed scheduled task since the number of days specified.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Purge des rapports d'exécution</label>
+                <description>Cette tâche purge les rapports d'exécution de tâches terminées depuis un certain nombre de jours.</description>
+            </localizedDocumentations>
+        </documentation>
+        <spec>
+            <className>com.orchestranetworks.scheduler.task.SchedulerPurgeExecutionReports</className>
+        </spec>
+    </task>
+    <task>
+        <name>SchedulerPurgeWorkflowMainHistory</name>
+        <documentation>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Purge main workflow processes in history</label>
+                <description>This task removes the main workflow processes qualified to be purged.</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Purge des workflows principaux dans l'historique</label>
+                <description>Cette tâche nettoie les workflows principaux dans l'historique.</description>
+            </localizedDocumentations>
+        </documentation>
+        <spec>
+            <className>com.orchestranetworks.scheduler.task.SchedulerPurgeWorkflowMainHistory</className>
+        </spec>
+    </task>
+</scheduler>

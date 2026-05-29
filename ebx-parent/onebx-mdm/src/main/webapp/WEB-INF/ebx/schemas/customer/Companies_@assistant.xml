@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+    <assistanceFunctions>
+        <id>5</id>
+        <tablePath>/root/Companies</tablePath>
+        <localizedLabelAndDescription>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Try to fill the company details</label>
+                <description>Try to get the company description, translate it into Chinese, get the Legal Entity Identifier, and also suggest an activity sector</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+                <label>Remplis la fiche</label>
+                <description>Suggère une description, une description en Chinois, un identifiant d'entité légale, et le secteur d'activité</description>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>it_IT</locale>
+            </localizedDocumentations>
+        </localizedLabelAndDescription>
+        <enabled>true</enabled>
+        <LLM>1</LLM>
+        <inputFields>
+            <field>/root/Companies/Identification/Name</field>
+            <alias>Name</alias>
+        </inputFields>
+        <outputFields>
+            <field>/root/Companies/Identification/description</field>
+        </outputFields>
+        <outputFields>
+            <field>/root/Companies/Identification/descriptionCN</field>
+        </outputFields>
+        <outputFields>
+            <field>/root/Companies/Identification/LegalEntityIdentifier</field>
+        </outputFields>
+        <outputFields>
+            <field>/root/Companies/AdditionalInformation/ActivitySector</field>
+        </outputFields>
+        <virtualOutputFields>
+            <id>SourceForDescription</id>
+            <dataType>osd:text</dataType>
+            <localizedLabelAndDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Source for the description</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Source pour la description</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>it_IT</locale>
+                </localizedDocumentations>
+            </localizedLabelAndDescription>
+        </virtualOutputFields>
+        <virtualOutputFields>
+            <id>SourceForLegalEntityIdentifier</id>
+            <dataType>osd:text</dataType>
+            <localizedLabelAndDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Source for Legal Identifier</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Source pour l'identifiant légal</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>it_IT</locale>
+                </localizedDocumentations>
+            </localizedLabelAndDescription>
+        </virtualOutputFields>
+        <prompt>Based on the company ${Name}, get the output information. Add in the source fields where the information is coming from and your confidence score in parenthesis</prompt>
+    </assistanceFunctions>
+</root>

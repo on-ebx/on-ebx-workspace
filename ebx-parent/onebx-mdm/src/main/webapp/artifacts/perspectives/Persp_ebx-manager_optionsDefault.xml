@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<x:root xmlns:x="urn:ebx-schemas:cfx_1.0">
+    <domain>
+        <optionsDefault>
+            <importExport>
+                <csvCharset>UTF-8</csvCharset>
+                <csvSeparator>;</csvSeparator>
+                <csvListSeparator>&#xd;</csvListSeparator>
+                <importMode>O</importMode>
+                <xmlMissingValue>true</xmlMissingValue>
+                <xmlIgnoreExtraColumns>false</xmlIgnoreExtraColumns>
+            </importExport>
+        </optionsDefault>
+    </domain>
+</x:root>

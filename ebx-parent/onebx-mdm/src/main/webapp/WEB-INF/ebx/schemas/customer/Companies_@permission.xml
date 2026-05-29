@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+    <permissions>
+        <tablePath>/root/Companies</tablePath>
+        <script>//Business users can't see blacklisted records
+  if isMember('User') and record.AdditionalInformation.blackListed then
+    return hidden;
+  
+  return readWrite;</script>
+        <activated>false</activated>
+    </permissions>
+</root>

@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+    <DashboardConfiguration>
+        <Tile>
+            <id>0c7c9421-aeee-4429-92f7-ffc9e4f31f64</id>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>SendEmail_Workflow instances statistics</label>
+                    <description>Computes the number of workflow instances in different states, such as to be executed, in progress, completed, and errors.</description>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>SendEmail_Statistiques sur les instances de workflow</label>
+                    <description>Calcule le nombre d'instances de workflow dans différents états : à exécuter, en cours, terminé et erreurs.</description>
+                </localizedDocumentations>
+            </labelDescription>
+            <section>0f5b0d97-427f-448d-8131-2c1309e55641</section>
+            <indicatorGroups>
+                <indicator>a8cccb49-2768-4170-9dc8-30a2444744e9</indicator>
+                <availableDisplayModes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</availableDisplayModes>
+                <availableDisplayModes>3297d6d7-84c7-4d81-a79f-6bec53359a9d</availableDisplayModes>
+                <availableDisplayModes>02cfccc4-4843-11ec-81d3-0242ac130003</availableDisplayModes>
+                <availableDisplayModes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</availableDisplayModes>
+                <defaultDisplayMode>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</defaultDisplayMode>
+            </indicatorGroups>
+            <size>2eac57fe-0a40-11ec-9a03-0242ac130003</size>
+        </Tile>
+        <Tile>
+            <id>25e19747-a593-4788-b406-66243423d990</id>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Person_Table record count</label>
+                    <description>Calculates the number of records in a table.</description>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Person_Nombre d'enregistrements d'une table</label>
+                    <description>Retoune de nombre d'enregistrements d'une table.</description>
+                </localizedDocumentations>
+            </labelDescription>
+            <section>0f5b0d97-427f-448d-8131-2c1309e55641</section>
+            <indicatorGroups>
+                <indicator>55a730d7-1315-4155-af93-3561a1d026a5</indicator>
+                <availableDisplayModes>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</availableDisplayModes>
+                <availableDisplayModes>e80e1d72-622c-4210-ae5a-b721b505aae6</availableDisplayModes>
+                <availableDisplayModes>1e76f993-9799-4643-98db-459d17130245</availableDisplayModes>
+                <availableDisplayModes>59c0ddef-d3f1-4852-a52b-4648cc76abd8</availableDisplayModes>
+                <availableDisplayModes>3297d6d7-84c7-4d81-a79f-6bec53359a9d</availableDisplayModes>
+                <availableDisplayModes>6bff6e32-678a-4a06-98cd-f066ea730947</availableDisplayModes>
+                <availableDisplayModes>02cfccc4-4843-11ec-81d3-0242ac130003</availableDisplayModes>
+                <defaultDisplayMode>3939a1d8-dbe7-4b11-95a3-4fb4c146bb2e</defaultDisplayMode>
+            </indicatorGroups>
+            <size>2eac57fe-0a40-11ec-9a03-0242ac130003</size>
+            <order>0</order>
+        </Tile>
+        <Tile>
+            <id>987fbc73-4af1-4a7d-8aec-ca7819940dc6</id>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Person_Table freshness</label>
+                    <description>Computes table freshness (the average of each record's freshness score). A record's score is calculated using the following method: subtract the indicator's last execution date from the record's last modification date. The lower the score, the fresher the data.</description>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>Person_Fraîcheur de la table</label>
+                    <description>Calcule la fraîcheur de la table (la moyenne du score de fraîcheur de chaque enregistrement). Le score d'un enregistrement est calculé selon la méthode suivante : soustraire la date de dernière exécution de l'indicateur à la date de dernière modification de l'enregistrement. Plus le score est bas, plus les données sont fraîches.</description>
+                </localizedDocumentations>
+            </labelDescription>
+            <section>0f5b0d97-427f-448d-8131-2c1309e55641</section>
+            <indicatorGroups>
+                <indicator>6a2c366c-21a0-4352-bc40-d70e9b35d52a</indicator>
+                <availableDisplayModes>1e76f993-9799-4643-98db-459d17130245</availableDisplayModes>
+                <defaultDisplayMode>1e76f993-9799-4643-98db-459d17130245</defaultDisplayMode>
+            </indicatorGroups>
+            <size>2eac57fe-0a40-11ec-9a03-0242ac130003</size>
+            <order>1</order>
+        </Tile>
+    </DashboardConfiguration>
+</root>

@@ -1,0 +1,1077 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--XML schema generated from EBX(TM) DMA instance [reference=BasicTypesDataModel] on Fri Dec 04 17:55:42 EST 2020 by user [admin].-->
+<xs:schema xmlns:osd="urn:ebx-schemas:common_1.0" xmlns:fmt="urn:ebx-schemas:format_1.0" xmlns:ebxbnd="urn:ebx-schemas:binding_1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ebxs="urn:ebx-schemas:session_1.0">
+    <xs:import namespace="urn:ebx-schemas:common_1.0" schemaLocation="http://schema.orchestranetworks.com/common_1.0.xsd"/>
+    <xs:import namespace="urn:ebx-schemas:session_1.0" schemaLocation="http://schema.orchestranetworks.com/session_1.0.xsd"/>
+    <xs:simpleType name="BaseDate">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Base Date</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:date">
+            <xs:minInclusive value="1900-01-01">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <osd:validation>
+                            <message>Year must be 4 digits and no earlier than 1/1/1900</message>
+                        </osd:validation>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:minInclusive>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="BaseDateTime">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Base DateTime</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:dateTime">
+            <xs:minInclusive value="1900-01-01T00:00:00.000">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <osd:validation>
+                            <message>Year must be 4 digits and no earlier than 1/1/1900</message>
+                        </osd:validation>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:minInclusive>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="BaseLongString">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Base Long String</osd:label>
+            </xs:documentation>
+            <xs:appinfo>
+                <osd:defaultView>
+                    <widget osd:class="com.orchestranetworks.ps.widget.TableCellTextScrollWidget$Factory"/>
+                </osd:defaultView>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="255"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="BaseString">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Base String</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="80"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="BaseText">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Base Text</osd:label>
+            </xs:documentation>
+            <xs:appinfo>
+                <osd:defaultView>
+                    <widget osd:class="com.orchestranetworks.ps.widget.TableCellTextScrollWidget$Factory"/>
+                </osd:defaultView>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="2000"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="DayOfMonth">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Day of Month</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="1">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <osd:validation>
+                            <message>Day of Month must be at least 1</message>
+                        </osd:validation>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:minInclusive>
+            <xs:maxInclusive value="31">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <osd:validation>
+                            <message>Day of Month must be at most 31</message>
+                        </osd:validation>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:maxInclusive>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="DayOfWeek">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Day Of Week</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration osd:label="1 - Sunday" value="Sunday"/>
+            <xs:enumeration osd:label="2 - Monday" value="Monday"/>
+            <xs:enumeration osd:label="3 - Tuesday" value="Tuesday"/>
+            <xs:enumeration osd:label="4 - Wednesday" value="Wednesday"/>
+            <xs:enumeration osd:label="5 - Thursday" value="Thursday"/>
+            <xs:enumeration osd:label="6 - Friday" value="Friday"/>
+            <xs:enumeration osd:label="7 - Saturday" value="Saturday"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="EmailAddress">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Email Address</osd:label>
+            </xs:documentation>
+            <xs:appinfo>
+                <osd:otherFacets>
+                    <osd:constraint class="com.orchestranetworks.ps.constraint.EmailAddressConstraint"/>
+                </osd:otherFacets>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="255"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Gender">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Gender</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="BaseString">
+            <xs:enumeration value="Female"/>
+            <xs:enumeration value="Male"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Month">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Month</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:int">
+            <xs:enumeration osd:label="January" value="1"/>
+            <xs:enumeration osd:label="February" value="2"/>
+            <xs:enumeration osd:label="March" value="3"/>
+            <xs:enumeration osd:label="April" value="4"/>
+            <xs:enumeration osd:label="May" value="5"/>
+            <xs:enumeration osd:label="June" value="6"/>
+            <xs:enumeration osd:label="July" value="7"/>
+            <xs:enumeration osd:label="August" value="8"/>
+            <xs:enumeration osd:label="September" value="9"/>
+            <xs:enumeration osd:label="October" value="10"/>
+            <xs:enumeration osd:label="November" value="11"/>
+            <xs:enumeration osd:label="December" value="12"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Percentage">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Percentage</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="6"/>
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="YesNo">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Yes No</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="BaseString">
+            <xs:enumeration value="Yes"/>
+            <xs:enumeration value="No"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="Base">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Base</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="id" type="xs:int" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Id</osd:label>
+                    </xs:documentation>
+                    <xs:appinfo>
+                        <osd:autoIncrement/>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="name" type="BaseString" minOccurs="1" maxOccurs="1" osd:checkNullInput="true">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Name</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="description" type="BaseText" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Description</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="BaseAudit">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>BaseAudit</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="createDateTime" type="xs:dateTime" minOccurs="0" maxOccurs="1" osd:disableValidation="true">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Create Date Time</osd:label>
+                    </xs:documentation>
+                    <xs:appinfo>
+                        <osd:function class="com.orchestranetworks.ps.valuefunction.CreateDateTimeValueFunction"/>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="createdBy" type="xs:string" minOccurs="0" maxOccurs="1" osd:disableValidation="true">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Created By</osd:label>
+                    </xs:documentation>
+                    <xs:appinfo>
+                        <osd:function class="com.orchestranetworks.ps.valuefunction.CreatorUserIDFunction"/>
+                        <osd:otherFacets>
+                            <osd:constraintEnumeration class="com.orchestranetworks.ps.constraint.UserConstraintEnumeration"/>
+                        </osd:otherFacets>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="lastUpdateDateTime" type="xs:dateTime" minOccurs="0" maxOccurs="1" osd:disableValidation="true">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Last Update Date Time</osd:label>
+                    </xs:documentation>
+                    <xs:appinfo>
+                        <osd:function class="com.orchestranetworks.ps.valuefunction.LastUpdateDateTimeValueFunction"/>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="lastUpdatedBy" type="xs:string" minOccurs="0" maxOccurs="1" osd:disableValidation="true">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Last Updated By</osd:label>
+                    </xs:documentation>
+                    <xs:appinfo>
+                        <osd:function class="com.orchestranetworks.ps.valuefunction.LastUpdateUserIDValueFunction"/>
+                        <osd:otherFacets>
+                            <osd:constraintEnumeration class="com.orchestranetworks.ps.constraint.UserConstraintEnumeration"/>
+                        </osd:otherFacets>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="BaseAuditPersisted">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Base Audit Persisted</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="createDateTime" type="xs:dateTime" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Create Date Time</osd:label>
+                    </xs:documentation>
+                    <xs:appinfo>
+                        <osd:trigger class="com.orchestranetworks.ps.trigger.BaseAuditPersistedFieldsTableTrigger"/>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="createdBy" type="BaseString" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Created By</osd:label>
+                    </xs:documentation>
+                    <xs:appinfo>
+                        <osd:otherFacets>
+                            <osd:constraintEnumeration class="com.orchestranetworks.ps.constraint.UserConstraintEnumeration">
+                                <alwaysReadOnly>true</alwaysReadOnly>
+                            </osd:constraintEnumeration>
+                        </osd:otherFacets>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="lastUpdateDateTime" type="xs:dateTime" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Last Update Date Time</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="lastUpdatedBy" type="BaseString" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Last Updated By</osd:label>
+                    </xs:documentation>
+                    <xs:appinfo>
+                        <osd:otherFacets>
+                            <osd:constraintEnumeration class="com.orchestranetworks.ps.constraint.UserConstraintEnumeration">
+                                <alwaysReadOnly>true</alwaysReadOnly>
+                            </osd:constraintEnumeration>
+                        </osd:otherFacets>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="BaseStringId">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Base String Id</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="id" type="BaseString" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Id</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="name" type="BaseString" minOccurs="1" maxOccurs="1" osd:checkNullInput="true">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Name</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="description" type="BaseText" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Description</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="BaseWithCode">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Base With Code</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="id" type="xs:int" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Id</osd:label>
+                    </xs:documentation>
+                    <xs:appinfo>
+                        <osd:autoIncrement/>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="code" type="BaseString" minOccurs="1" maxOccurs="1" osd:checkNullInput="true">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Code</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="name" type="BaseString" minOccurs="1" maxOccurs="1" osd:checkNullInput="true">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Name</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="description" type="BaseText" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Description</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="BaseWithLongStringName">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Base With Long String Name</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="id" type="xs:int" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Id</osd:label>
+                    </xs:documentation>
+                    <xs:appinfo>
+                        <osd:autoIncrement/>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="name" type="BaseLongString" minOccurs="1" maxOccurs="1" osd:checkNullInput="true">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Name</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="description" type="BaseText" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Description</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DateRange">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Date Range</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="startDate" type="BaseDate" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Start Date</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="endDate" type="BaseDate" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>End Date</osd:label>
+                    </xs:documentation>
+                    <xs:appinfo>
+                        <osd:otherFacets>
+                            <osd:minInclusive path="../startDate"/>
+                        </osd:otherFacets>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DateRangeNoFuture">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Date Range No Future</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="startDate" type="BaseDate" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Start Date</osd:label>
+                    </xs:documentation>
+                    <xs:appinfo>
+                        <osd:otherFacets>
+                            <osd:constraint class="com.orchestranetworks.ps.constraint.DateNotInFutureConstraint"/>
+                        </osd:otherFacets>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="endDate" type="BaseDate" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>End Date</osd:label>
+                    </xs:documentation>
+                    <xs:appinfo>
+                        <osd:otherFacets>
+                            <osd:minInclusive path="../startDate"/>
+                            <osd:constraint class="com.orchestranetworks.ps.constraint.DateNotInFutureConstraint"/>
+                        </osd:otherFacets>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DateRangeWithRequiredStartDate">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Date Range With Required Start Date</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="startDate" type="BaseDate" minOccurs="1" maxOccurs="1" osd:checkNullInput="true">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Start Date</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="endDate" type="BaseDate" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>End Date</osd:label>
+                    </xs:documentation>
+                    <xs:appinfo>
+                        <osd:otherFacets>
+                            <osd:minInclusive path="../startDate"/>
+                        </osd:otherFacets>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DateRangeWithRequiredStartDateNoFuture">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Date Range With Required Start Date No Future</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="startDate" type="BaseDate" minOccurs="1" maxOccurs="1" osd:checkNullInput="true">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Start Date</osd:label>
+                    </xs:documentation>
+                    <xs:appinfo>
+                        <osd:otherFacets>
+                            <osd:constraint class="com.orchestranetworks.ps.constraint.DateNotInFutureConstraint"/>
+                        </osd:otherFacets>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="endDate" type="BaseDate" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>End Date</osd:label>
+                    </xs:documentation>
+                    <xs:appinfo>
+                        <osd:otherFacets>
+                            <osd:minInclusive path="../startDate"/>
+                            <osd:constraint class="com.orchestranetworks.ps.constraint.DateNotInFutureConstraint"/>
+                        </osd:otherFacets>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DateTimeRange">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Date Time Range</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="startDateTime" type="BaseDateTime" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Start Date Time</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="endDateTime" type="BaseDateTime" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>End Date Time</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DateTimeRangeNoFuture">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Date Time Range No Future</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="startDateTime" type="BaseDateTime" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Start Date Time</osd:label>
+                    </xs:documentation>
+                    <xs:appinfo>
+                        <osd:otherFacets>
+                            <osd:constraint class="com.orchestranetworks.ps.constraint.DateNotInFutureConstraint"/>
+                        </osd:otherFacets>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="endDateTime" type="BaseDateTime" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>End Date Time</osd:label>
+                    </xs:documentation>
+                    <xs:appinfo>
+                        <osd:otherFacets>
+                            <osd:minInclusive path="../startDateTime"/>
+                            <osd:constraint class="com.orchestranetworks.ps.constraint.DateNotInFutureConstraint"/>
+                        </osd:otherFacets>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DateTimeRangeWithRequiredStartDateTime">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Date Time Range With Required Start Date Time</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="startDateTime" type="BaseDateTime" minOccurs="1" maxOccurs="1" osd:checkNullInput="true">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Start Date Time</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="endDateTime" type="BaseDateTime" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>End Date Time</osd:label>
+                    </xs:documentation>
+                    <xs:appinfo>
+                        <osd:otherFacets>
+                            <osd:minInclusive path="../startDateTime"/>
+                        </osd:otherFacets>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DateTimeRangeWithRequiredStartDateTimeNoFuture">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Date Time Range With Required Start Date Time No Future</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="startDateTime" type="BaseDateTime" minOccurs="1" maxOccurs="1" osd:checkNullInput="true">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Start Date Time</osd:label>
+                    </xs:documentation>
+                    <xs:appinfo>
+                        <osd:otherFacets>
+                            <osd:constraint class="com.orchestranetworks.ps.constraint.DateNotInFutureConstraint"/>
+                        </osd:otherFacets>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="endDateTime" type="BaseDateTime" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>End Date Time</osd:label>
+                    </xs:documentation>
+                    <xs:appinfo>
+                        <osd:otherFacets>
+                            <osd:minInclusive path="../startDateTime"/>
+                            <osd:constraint class="com.orchestranetworks.ps.constraint.DateNotInFutureConstraint"/>
+                        </osd:otherFacets>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="GeographicPoint">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Geographic Point</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="latitude" type="xs:decimal" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Latitude</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="longitude" type="xs:decimal" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Longitude</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="GeographicPointRequired">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Geographic Point Required</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="latitude" type="xs:decimal" minOccurs="1" maxOccurs="1" osd:checkNullInput="true">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Latitude</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="longitude" type="xs:decimal" minOccurs="1" maxOccurs="1" osd:checkNullInput="true">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Longitude</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="GoogleMapsAddress">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Google Maps Address</osd:label>
+            </xs:documentation>
+            <xs:appinfo>
+                <osd:information>Google Maps Address Standardization Widget</osd:information>
+                <osd:defaultView>
+                    <displayMode>expanded</displayMode>
+                </osd:defaultView>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="number" type="BaseString" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Number</osd:label>
+                        <osd:description>This field indicates the precise street number.</osd:description>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="street" type="BaseString" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Street</osd:label>
+                        <osd:description>This field indicates a named route (such as "US 101").</osd:description>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="premise" type="BaseString" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Premise</osd:label>
+                        <osd:description>This field indicates a named location, usually a building or collection of buildings with a common name.</osd:description>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="intersection" type="BaseString" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Intersection</osd:label>
+                        <osd:description>This field indicates a major intersection, usually of two major roads.</osd:description>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="neighborhood" type="BaseString" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Neighborhood</osd:label>
+                        <osd:description>This field indicates a named neighborhood.</osd:description>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="subLocality" type="BaseString" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Sub Locality</osd:label>
+                        <osd:description>This field  indicates a first-order civil entity below a locality.</osd:description>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="city" type="BaseString" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>City/Town</osd:label>
+                        <osd:description>This field indicates an incorporated city or town political entity.</osd:description>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="county" type="BaseString" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>County</osd:label>
+                        <osd:description>This field indicates a lower-order civil entity below the country level. Within the United States, these administrative levels are counties. Not all nations exhibit these administrative levels.</osd:description>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="stateProvince" type="BaseString" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>State/Province</osd:label>
+                        <osd:description>This field indicates a first-order civil entity below the country level. Within the United States, these administrative levels are states. Not all nations exhibit these administrative levels. In most cases, this will closely match ISO 3166-2 subdivisions and other widely circulated lists; however this is not guaranteed as our geocoding results are based on a variety of signals and location data.</osd:description>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="postalCode" type="BaseString" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Postal Code</osd:label>
+                        <osd:description>This field indicates a postal code as used to address postal mail within the country. Some countries like Fiji, Bahamas do not use postal code.</osd:description>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="country" type="BaseString" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Country</osd:label>
+                        <osd:description>This field indicates the national political entity.</osd:description>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="latitude" type="BaseString" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Latitude</osd:label>
+                        <osd:description>This field indicates latitude of the location.</osd:description>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="longitude" type="BaseString" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Longitude</osd:label>
+                        <osd:description>This field indicates longitude of the location.</osd:description>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="formattedAddress" type="BaseLongString" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Formatted</osd:label>
+                        <osd:description>This field indicates the human-readable address of this location.</osd:description>
+                    </xs:documentation>
+                    <xs:appinfo>
+                        <osd:defaultView>
+                            <widget>
+                                <textBox>
+                                    <multiLine>true</multiLine>
+                                    <height>
+                                        <unit>Pixel</unit>
+                                        <value>70</value>
+                                    </height>
+                                </textBox>
+                            </widget>
+                        </osd:defaultView>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="PersonName">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Person Name</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="firstName" type="BaseString" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>First Name</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="middleName" type="BaseString" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Middle Name</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="lastName" type="BaseString" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Last Name</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Phone">
+        <xs:sequence>
+            <xs:element name="countryCode" type="BaseString" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Country Code</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="areaCode" type="BaseString" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Area Code</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="localNumber" type="BaseString" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Local Number</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="SeasonalDateRange">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Seasonal Date Range</osd:label>
+                <osd:description>A date range that is year agnostic -- in other words, a start month/day and an end month/day (may span the boundary of a year).</osd:description>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="startMonth" type="Month" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Start Month</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="startDay" type="DayOfMonth" minOccurs="0" maxOccurs="1" osd:checkNullInput="true">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Start Day</osd:label>
+                    </xs:documentation>
+                    <xs:appinfo>
+                        <osd:otherFacets>
+                            <osd:constraint class="com.orchestranetworks.ps.constraint.FieldConditionallyRequiredConstraint">
+                                <otherFieldPath>../startMonth</otherFieldPath>
+                                <otherFieldValue>&lt;not-null&gt;</otherFieldValue>
+                            </osd:constraint>
+                        </osd:otherFacets>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="endMonth" type="Month" minOccurs="0" maxOccurs="1" osd:checkNullInput="true">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>End Month</osd:label>
+                    </xs:documentation>
+                    <xs:appinfo>
+                        <osd:otherFacets>
+                            <osd:constraint class="com.orchestranetworks.ps.constraint.FieldConditionallyRequiredConstraint">
+                                <otherFieldPath>../startMonth</otherFieldPath>
+                                <otherFieldValue>&lt;not-null&gt;</otherFieldValue>
+                            </osd:constraint>
+                        </osd:otherFacets>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="endDay" type="DayOfMonth" minOccurs="0" maxOccurs="1" osd:checkNullInput="true">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>End Day</osd:label>
+                    </xs:documentation>
+                    <xs:appinfo>
+                        <osd:otherFacets>
+                            <osd:constraint class="com.orchestranetworks.ps.constraint.FieldConditionallyRequiredConstraint">
+                                <otherFieldPath>../startMonth</otherFieldPath>
+                                <otherFieldValue>&lt;not-null&gt;</otherFieldValue>
+                            </osd:constraint>
+                        </osd:otherFacets>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="TimeAmount">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Time Amount</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="timeValue" type="xs:decimal" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Time Value</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="timeUnits" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Time Units</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="BaseString">
+                        <xs:enumeration value="Seconds"/>
+                        <xs:enumeration value="Minutes"/>
+                        <xs:enumeration value="Hours"/>
+                        <xs:enumeration value="Days"/>
+                        <xs:enumeration value="Weeks"/>
+                        <xs:enumeration value="Months"/>
+                        <xs:enumeration value="Years"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="TimeRange">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Time Range</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="startTime" type="xs:time" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Start Time</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="endTime" type="xs:time" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>End Time</osd:label>
+                    </xs:documentation>
+                    <xs:appinfo>
+                        <osd:otherFacets>
+                            <osd:minInclusive path="../startTime"/>
+                        </osd:otherFacets>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="TimeRangeRequired">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Time Range Required</osd:label>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="startTime" type="xs:time" minOccurs="1" maxOccurs="1" osd:checkNullInput="true">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>Start Time</osd:label>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="endTime" type="xs:time" minOccurs="1" maxOccurs="1" osd:checkNullInput="true">
+                <xs:annotation>
+                    <xs:documentation xml:lang="en-US">
+                        <osd:label>End Time</osd:label>
+                    </xs:documentation>
+                    <xs:appinfo>
+                        <osd:otherFacets>
+                            <osd:minInclusive path="../startTime"/>
+                        </osd:otherFacets>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

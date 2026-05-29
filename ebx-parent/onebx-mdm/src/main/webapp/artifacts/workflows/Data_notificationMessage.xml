@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+    <configuration>
+        <notificationMessage>
+            <id>1</id>
+            <documentation>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>[OfferedTo] Work item notification</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>[Proposé] Notification de bon de travail</label>
+                </localizedDocumentations>
+            </documentation>
+            <message>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>[OfferedTo] New work item</label>
+                    <description>Today at ${system.time}, a new work item has been offered to you. You may accept it.</description>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>[Proposé] Nouveau bon de travail</label>
+                    <description>Aujourd'hui à ${system.time}, un nouveau bon de travail vous a été proposé. Vous pouvez le prendre en charge.</description>
+                </localizedDocumentations>
+            </message>
+        </notificationMessage>
+        <notificationMessage>
+            <id>2</id>
+            <documentation>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>[AllocatedTo] Work item notification</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>[Alloué] Notification de bon de travail</label>
+                </localizedDocumentations>
+            </documentation>
+            <message>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>[AllocatedTo] New work item</label>
+                    <description>Today at ${system.time}, a new work item has been allocated to you.</description>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                    <label>[Alloué] Nouveau bon de travail</label>
+                    <description>Aujourd'hui à ${system.time}, un nouveau bon de travail vous a été alloué.</description>
+                </localizedDocumentations>
+            </message>
+        </notificationMessage>
+    </configuration>
+</root>

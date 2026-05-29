@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--XML schema generated from EBX DMA instance [reference=BatchImportExportDataModel] on Mon Apr 01 11:54:34 EDT 2019 by user [admin].-->
+<xs:schema xmlns:osd="urn:ebx-schemas:common_1.0" xmlns:fmt="urn:ebx-schemas:format_1.0" xmlns:ebxbnd="urn:ebx-schemas:binding_1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ebxs="urn:ebx-schemas:session_1.0">
+    <xs:import namespace="urn:ebx-schemas:common_1.0" schemaLocation="http://schema.orchestranetworks.com/common_1.0.xsd"/>
+    <xs:import namespace="urn:ebx-schemas:session_1.0" schemaLocation="http://schema.orchestranetworks.com/session_1.0.xsd"/>
+    <xs:annotation>
+        <xs:appinfo>
+            <osd:inheritance>
+                <dataSetInheritance>none</dataSetInheritance>
+            </osd:inheritance>
+            <ebxbnd:binding targetDirectory="../ps-mdm/src">
+                <javaPathConstants typeName="com.orchestranetworks.ps.batch.path.BatchImportExportPaths">
+                    <nodes root="/" prefix="" relativeToRoot="false"/>
+                </javaPathConstants>
+            </ebxbnd:binding>
+        </xs:appinfo>
+    </xs:annotation>
+    <xs:element name="root" osd:access="--">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="BatchImport" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Batch Import</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/TrackingId </primaryKeys>
+                            </osd:table>
+                            <osd:trigger class="com.orchestranetworks.ps.batch.ImportTrigger"/>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="TrackingId" type="xs:int" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:appinfo>
+                                        <osd:autoIncrement/>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="DataSpace" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="DataSet" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="TablePath" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="FilePath" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="HeaderFormat" minOccurs="1" maxOccurs="1" default="LABEL">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="LABEL"/>
+                                        <xs:enumeration value="XPATH"/>
+                                        <xs:enumeration value="NONE"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="FieldSeparator" minOccurs="1" maxOccurs="1">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:length value="1"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="CommitThreshold" type="xs:int" minOccurs="0" maxOccurs="1" default="2000"/>
+                            <xs:element name="FileType" minOccurs="1" maxOccurs="1">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="csv"/>
+                                        <xs:enumeration value="XML"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="FileEncoding" type="xs:string" minOccurs="1" maxOccurs="1" default="UTF-8"/>
+                            <xs:element name="ImportMode" minOccurs="1" maxOccurs="1" default="O">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="O"/>
+                                        <xs:enumeration value="I"/>
+                                        <xs:enumeration value="U"/>
+                                        <xs:enumeration value="R"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="Status" minOccurs="0" maxOccurs="1" default="Started">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Started"/>
+                                        <xs:enumeration value="Succeeded"/>
+                                        <xs:enumeration value="Failed"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="StartDate" type="xs:dateTime" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="EndDate" type="xs:dateTime" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="Comment" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="Exception" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="OrderDate" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>OrderDate</osd:label>
+                                        <osd:description>OrderDate for the JOB (YYMMDD) format. In sync with control-m jobs</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="workingDataSpace" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Working Data Space</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

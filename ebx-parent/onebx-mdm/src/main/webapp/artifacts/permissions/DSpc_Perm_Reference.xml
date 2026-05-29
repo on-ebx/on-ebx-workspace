@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository>
+    <permissions>
+        <homeKey>BReference</homeKey>
+        <profile>Beveryone</profile>
+        <isRestrictionPolicy>false</isRestrictionPolicy>
+        <branchAccess>W</branchAccess>
+        <childBranchCreation>E</childBranchCreation>
+        <childVersionCreation>E</childVersionCreation>
+        <initiateMergeBranch>E</initiateMergeBranch>
+        <exportBranch>E</exportBranch>
+        <importBranch>E</importBranch>
+        <closeBranch>E</closeBranch>
+        <closeVersion>E</closeVersion>
+        <rootInstanceCreation>E</rootInstanceCreation>
+        <ownerPermissionsOnChild>
+            <changeOwner>E</changeOwner>
+            <changePermissions>E</changePermissions>
+            <childBranchCreation>E</childBranchCreation>
+            <childVersionCreation>E</childVersionCreation>
+            <initiateMergeBranch>E</initiateMergeBranch>
+            <exportBranch>E</exportBranch>
+            <importBranch>E</importBranch>
+            <closeBranch>E</closeBranch>
+            <closeVersion>E</closeVersion>
+            <rootInstanceCreation>E</rootInstanceCreation>
+            <listServicesAccess/>
+        </ownerPermissionsOnChild>
+    </permissions>
+</repository>

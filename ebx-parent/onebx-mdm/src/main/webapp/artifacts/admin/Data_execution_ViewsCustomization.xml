@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+    <technicalConfiguration>
+        <ViewsCustomization>
+            <defaultModelingValues>
+                <quickLaunching>false</quickLaunching>
+                <automaticallyOpenTheFirstStep>false</automaticallyOpenTheFirstStep>
+                <progressStrategyForSubworkflowsInvocation>asynchronous</progressStrategyForSubworkflowsInvocation>
+                <hiddenInGraphicalViewForScriptTask>false</hiddenInGraphicalViewForScriptTask>
+            </defaultModelingValues>
+        </ViewsCustomization>
+    </technicalConfiguration>
+</root>

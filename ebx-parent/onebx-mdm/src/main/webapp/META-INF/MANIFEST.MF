@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Implementation-Title: Web application 'onebx-mdm'
+Implementation-Version: 1.0 [build 1] 2026-01-01
+Implementation-Vendor: Cloud Software Group

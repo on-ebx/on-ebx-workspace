@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+    <Permission>
+        <GlobalPermission>
+            <id>0150e32c-ff82-479d-a998-c5b76b693878</id>
+            <profile>Badministrator</profile>
+            <restrictionPolicyApplied>false</restrictionPolicyApplied>
+            <permissionStrategy>FOLLOW_EBX</permissionStrategy>
+            <servicePermission>
+                <dashboardCreation>true</dashboardCreation>
+                <profiling>true</profiling>
+            </servicePermission>
+        </GlobalPermission>
+    </Permission>
+</root>

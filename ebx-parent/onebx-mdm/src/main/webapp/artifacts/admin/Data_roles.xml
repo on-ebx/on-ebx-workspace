@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<directory>
+    <roles>
+        <name>Tech Admin</name>
+        <documentation>
+            <localizedDocumentations>
+                <locale>en_US</locale>
+                <label>Tech Admin</label>
+            </localizedDocumentations>
+            <localizedDocumentations>
+                <locale>fr_FR</locale>
+            </localizedDocumentations>
+        </documentation>
+    </roles>
+</directory>

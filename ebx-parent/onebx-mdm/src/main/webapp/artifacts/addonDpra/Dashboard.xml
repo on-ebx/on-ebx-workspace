@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+    <DashboardConfiguration>
+        <Dashboard>
+            <id>2c5f0001-7d1b-4158-bc23-2d9a27a13f93</id>
+            <labelDescription>
+                <localizedDocumentations>
+                    <locale>en_US</locale>
+                    <label>Person Dashboard</label>
+                </localizedDocumentations>
+                <localizedDocumentations>
+                    <locale>fr_FR</locale>
+                </localizedDocumentations>
+            </labelDescription>
+            <theme>9e557fb9-c138-43d7-97e3-a4300fd8e02a</theme>
+            <permission>
+                <owners>Badministrator</owners>
+                <viewers>Beveryone</viewers>
+            </permission>
+        </Dashboard>
+    </DashboardConfiguration>
+</root>

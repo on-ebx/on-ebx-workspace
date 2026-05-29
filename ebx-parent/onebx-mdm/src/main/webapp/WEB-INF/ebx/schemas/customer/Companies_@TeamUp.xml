@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+    <tableConfiguration>
+        <tablePath>/root/Companies</tablePath>
+        <ratings>
+            <activation>true</activation>
+            <showInSidebar>true</showInSidebar>
+        </ratings>
+        <comments>
+            <activation>true</activation>
+            <showInSidebar>true</showInSidebar>
+            <permissions>
+                <moderators>Uadmin</moderators>
+            </permissions>
+        </comments>
+        <tags>
+            <activation>true</activation>
+            <showInSidebar>true</showInSidebar>
+            <catalog_fk>1</catalog_fk>
+        </tags>
+    </tableConfiguration>
+</root>

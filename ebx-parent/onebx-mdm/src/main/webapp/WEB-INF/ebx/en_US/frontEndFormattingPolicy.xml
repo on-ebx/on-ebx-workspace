@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formattingPolicy  xmlns="urn:ebx-schemas:formattingPolicy_1.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="urn:ebx-schemas:formattingPolicy_1.0 ../schema/ebx-reserved/formattingPolicy_1.0.xsd">
+	<date pattern="MM/dd/yyyy" />
+	<time pattern="HH:mm:ss" />
+	<dateTime pattern="MM/dd/yyyy HH:mm:ss" />
+	<decimal pattern="###0.00#########" />
+	<int pattern="0" />
+</formattingPolicy>
