@@ -1,6 +1,6 @@
 # Starter eclipse workspace to get started with ON EBX
 
-Clone this project to get started with EBX in less than 30 mins. Ensure you have access to EBX binaries. If not, reach out to us: contact@onebx.com
+The puurpose of this project is to get people who are interested in EBX to get started with it in less than 30 mins. Ensure you have access to EBX binaries. If not, reach out to us: contact@onebx.com
 
 
 
